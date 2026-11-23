@@ -1,0 +1,3201 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan — Sukma &amp; Riksi</title>
+
+  <!-- Meta Open Graph untuk Pratinjau Foto & Judul Saat Dibagikan di WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ariksiy.github.io/sukma-riksi/" />
+  <meta property="og:title" content="Undangan Pernikahan — Sukma &amp; Riksi" />
+  <meta property="og:description" content="Walimatul 'Ursy Sukmawati, S.Pd &amp; Riksi Yusuf Tajiri • Ahad, 20 Desember 2026 • Kp. Jayanti, Desa Mekarsari, Kec. Ciparay, Kab. Bandung." />
+  <meta property="og:image" content="https://ariksiy.github.io/sukma-riksi/001.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Undangan Pernikahan — Sukma &amp; Riksi" />
+  <meta name="twitter:description" content="Walimatul 'Ursy Sukmawati, S.Pd &amp; Riksi Yusuf Tajiri • Ahad, 20 Desember 2026." />
+  <meta name="twitter:image" content="https://ariksiy.github.io/sukma-riksi/001.jpg" />
+
+  <!-- Google Fonts: Cormorant Garamond, Great Vibes, & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Penanganan Otomatis Ekstensi Foto & Konfigurasi Tema -->
+  <script>
+    window.handleSmartPhotoError = function (img) {
+      var base = img.getAttribute('data-photo-file') || '';
+      var step = parseInt(img.getAttribute('data-retry-step') || '0', 10);
+      var stem = base.replace(/\.[^.]+$/, '');
+      var candidates = [
+        stem + '.JPG',
+        stem + '.jpeg',
+        stem + '.JPEG',
+        stem + '.png',
+        stem + '.PNG',
+        stem + '.jpg.jpg'
+      ];
+
+      if (stem && step < candidates.length) {
+        img.setAttribute('data-retry-step', String(step + 1));
+        img.src = candidates[step];
+        return;
+      }
+
+      img.onerror = null;
+      var fallback = img.getAttribute('data-fallback-src');
+      if (fallback) {
+        img.src = fallback;
+      } else {
+        img.style.opacity = '0';
+      }
+    };
+
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blush: '#FAF1EF',
+            'blush-deep': '#F1E1DF',
+            dusty: '#AD6D79',
+            'dusty-dark': '#884B57',
+            sage: '#8A7E86',
+            'sage-soft': '#F2ECEF',
+            'sage-dark': '#5D4E56',
+            slate: '#4E5A67',
+            'slate-soft': '#EEF1F5',
+            champagne: '#9A7434',
+            'champagne-soft': '#F7EFE1',
+            ivory: '#FFFDFB',
+            cocoa: '#382F32',
+            taupe: '#6E5F63'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            script: ['"Great Vibes"', 'cursive'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+          },
+          keyframes: {
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-8px) rotate(1.5deg)' }
+            },
+            photoFloat: {
+              '0%, 100%': { transform: 'translateY(0px) scale(1)' },
+              '50%': { transform: 'translateY(-7px) scale(1.025)' }
+            },
+            kenBurns: {
+              '0%, 100%': { transform: 'scale(1.02) translateY(0px)' },
+              '50%': { transform: 'scale(1.07) translateY(-10px)' }
+            },
+            auraGlow: {
+              '0%, 100%': { opacity: '0.55', transform: 'scale(0.96)' },
+              '50%': { opacity: '0.9', transform: 'scale(1.05)' }
+            },
+            petalDrift: {
+              '0%': { transform: 'translateY(-10%) translateX(0px) rotate(0deg)', opacity: '0' },
+              '15%': { opacity: '0.65' },
+              '85%': { opacity: '0.55' },
+              '100%': { transform: 'translateY(105vh) translateX(35px) rotate(240deg)', opacity: '0' }
+            },
+            barBounce1: {
+              '0%, 100%': { height: '6px' },
+              '50%': { height: '16px' }
+            },
+            barBounce2: {
+              '0%, 100%': { height: '14px' },
+              '50%': { height: '5px' }
+            },
+            barBounce3: {
+              '0%, 100%': { height: '8px' },
+              '50%': { height: '18px' }
+            },
+            swipeUpCue: {
+              '0%, 100%': { transform: 'translateY(0px)', opacity: '0.9' },
+              '50%': { transform: 'translateY(-7px)', opacity: '1' }
+            },
+            coverEnter: {
+              '0%': { opacity: '0', transform: 'translateY(22px) scale(0.96)' },
+              '100%': { opacity: '1', transform: 'translateY(0) scale(1)' }
+            },
+            wishSlideIn: {
+              '0%': { opacity: '0', transform: 'translateY(-14px) scale(0.97)' },
+              '100%': { opacity: '1', transform: 'translateY(0) scale(1)' }
+            }
+          },
+          animation: {
+            'float-slow': 'floatSlow 6s ease-in-out infinite',
+            'photo-float': 'photoFloat 6.5s ease-in-out infinite',
+            'photo-float-delay': 'photoFloat 7.5s ease-in-out 1.8s infinite',
+            'ken-burns': 'kenBurns 18s ease-in-out infinite',
+            'aura-glow': 'auraGlow 6s ease-in-out infinite',
+            'petal-1': 'petalDrift 14s linear infinite',
+            'petal-2': 'petalDrift 18s linear 4s infinite',
+            'petal-3': 'petalDrift 16s linear 8s infinite',
+            'bar-1': 'barBounce1 0.9s ease-in-out infinite',
+            'bar-2': 'barBounce2 0.75s ease-in-out infinite',
+            'bar-3': 'barBounce3 1.05s ease-in-out infinite',
+            'swipe-cue': 'swipeUpCue 2.1s ease-in-out infinite',
+            'cover-in-1': 'coverEnter 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both',
+            'cover-in-2': 'coverEnter 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both',
+            'cover-in-3': 'coverEnter 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both',
+            'cover-in-4': 'coverEnter 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both',
+            'cover-in-5': 'coverEnter 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.7s both',
+            'wish-in': 'wishSlideIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Bingkai Offset Double-Line Emas Tipis, Album Berjalan & Animasi Masuk/Keluar -->
+  <style>
+    .offset-photo-card {
+      border-radius: 1rem;
+      border: 1.25px solid rgba(154, 116, 52, 0.38);
+      box-shadow:
+        0 12px 30px -8px rgba(154, 116, 52, 0.2),
+        inset 0 0 0 1px rgba(255, 253, 251, 0.9);
+    }
+
+    .offset-photo-card-sm {
+      border-radius: 1rem;
+      border: 1.25px solid rgba(154, 116, 52, 0.36);
+      box-shadow:
+        0 8px 22px -6px rgba(154, 116, 52, 0.16),
+        inset 0 0 0 1px rgba(255, 253, 251, 0.9);
+    }
+
+    /* Sembunyikan Scrollbar Bawaan pada Carousel Horizontal agar Tampilan Bersih */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Animasi Masuk & Keluar Setiap Bagian dan Komponen (Bidirectional Scroll Reveal) */
+    .scroll-reveal {
+      opacity: 0;
+      transition:
+        opacity 0.78s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.78s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-from-up {
+      transform: translate3d(0, 26px, 0) scale(0.96);
+    }
+
+    .reveal-from-left {
+      transform: translate3d(-28px, 0, 0) scale(0.96);
+    }
+
+    .reveal-from-right {
+      transform: translate3d(28px, 0, 0) scale(0.96);
+    }
+
+    .reveal-zoom-in {
+      transform: translate3d(0, 22px, 0) scale(0.94);
+    }
+
+    /* Status Keluar Saat Elemen Meninggalkan Layar ke Atas atau ke Bawah */
+    .scroll-reveal.is-exited-top {
+      opacity: 0;
+      transform: translate3d(0, -24px, 0) scale(0.96);
+      transition-delay: 0s !important;
+    }
+
+    .scroll-reveal.is-exited-bottom {
+      opacity: 0;
+      transition-delay: 0s !important;
+    }
+
+    .reveal-delay-100 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-150 {
+      transition-delay: 0.15s;
+    }
+
+    .reveal-delay-200 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-250 {
+      transition-delay: 0.25s;
+    }
+
+    .reveal-delay-300 {
+      transition-delay: 0.3s;
+    }
+
+    /* Status Masuk Saat Elemen Berada di Dalam Layar */
+    .scroll-reveal.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    /* Animasi Masuk & Keluar Modal (Lightbox, Tautan Tamu, Playlist) */
+    .animated-modal {
+      opacity: 0;
+      transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .animated-modal .animated-modal-card {
+      opacity: 0;
+      transform: translate3d(0, 22px, 0) scale(0.94);
+      transition:
+        opacity 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .animated-modal.modal-active {
+      opacity: 1;
+    }
+
+    .animated-modal.modal-active .animated-modal-card {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  </style>
+</head>
+<body class="bg-blush text-cocoa font-sans antialiased overflow-x-hidden selection:bg-dusty/20 selection:text-cocoa">
+
+  <!-- ===================================================================== -->
+  <!-- KELOPAK BUNGA JATUH HALUS (AMBIENT FLORAL PETALS)                     -->
+  <!-- ===================================================================== -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 z-10 overflow-hidden">
+    <svg class="absolute left-[12%] -top-10 w-5 h-5 text-dusty/30 animate-petal-1" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C8 6 6 10 8 15C10 19 14 21 16 18C18 15 17 9 12 2Z" />
+    </svg>
+    <svg class="absolute left-[55%] -top-10 w-4 h-4 text-slate/25 animate-petal-2" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C7 7 6 12 9 16C11 19 15 20 17 17C19 14 16 8 12 2Z" />
+    </svg>
+    <svg class="absolute left-[82%] -top-10 w-5 h-5 text-champagne/25 animate-petal-3" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C8 6 6 10 8 15C10 19 14 21 16 18C18 15 17 9 12 2Z" />
+    </svg>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- NOTIFIKASI TOAST (PENGGANTI ALERT)                                    -->
+  <!-- ===================================================================== -->
+  <div id="toast-container" aria-live="polite" class="fixed top-4 left-1/2 -translate-x-1/2 z-[80] flex flex-col items-center gap-2 w-[92%] max-w-sm pointer-events-none"></div>
+
+  <!-- ===================================================================== -->
+  <!-- PEMUTAR AUDIO & KONTROL MELAYANG POJOK KANAN ATAS                     -->
+  <!-- ===================================================================== -->
+  <audio id="bg-audio-player" preload="auto"></audio>
+  <input id="local-audio-loader" type="file" accept="audio/*" multiple class="hidden" />
+
+  <div id="floating-top-controls" class="fixed top-4 right-4 z-40 opacity-0 -translate-y-6 pointer-events-none transition-all duration-700 ease-out flex items-center gap-1.5 sm:gap-2">
+    <button
+      id="share-guest-modal-btn"
+      type="button"
+      title="Buat Tautan Nama Tamu"
+      class="bg-ivory/90 backdrop-blur-md border border-dusty/30 text-cocoa p-2.5 rounded-full shadow-md hover:bg-blush-deep transition-all duration-300 cursor-pointer"
+    >
+      <svg class="w-4 h-4 text-dusty-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+      </svg>
+    </button>
+
+    <div class="flex items-center bg-ivory/90 backdrop-blur-md border border-champagne/35 rounded-full shadow-md p-1">
+      <button
+        id="music-toggle-btn"
+        type="button"
+        aria-label="Putar atau Jeda Musik Latar"
+        class="group flex items-center gap-2 text-cocoa px-2.5 py-1.5 rounded-full hover:bg-champagne-soft transition-all duration-300 cursor-pointer"
+      >
+        <span id="music-bars" class="flex items-end gap-0.5 h-4 w-4 justify-center">
+          <span class="w-0.5 bg-dusty rounded-full animate-bar-1"></span>
+          <span class="w-0.5 bg-champagne rounded-full animate-bar-2"></span>
+          <span class="w-0.5 bg-slate rounded-full animate-bar-3"></span>
+        </span>
+        <span id="music-label" class="text-xs font-medium tracking-wide text-cocoa max-w-[96px] sm:max-w-[130px] truncate">Musik</span>
+      </button>
+
+      <button
+        id="music-next-btn"
+        type="button"
+        title="Lagu Berikutnya"
+        aria-label="Lagu Berikutnya"
+        class="hidden p-1.5 text-taupe hover:text-dusty-dark rounded-full hover:bg-blush transition cursor-pointer"
+      >
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 4l10 8-10 8V4zm14 1v14" />
+        </svg>
+      </button>
+
+      <button
+        id="music-playlist-btn"
+        type="button"
+        title="Daftar & Pilih Lagu"
+        aria-label="Daftar & Pilih Lagu"
+        class="p-1.5 text-taupe hover:text-dusty-dark rounded-full hover:bg-blush transition cursor-pointer"
+      >
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 1. HALAMAN SAMPUL (OPENING COVER — TANPA BINGKAI & GESTUR SWIPE/SCROLL) -->
+  <!-- ===================================================================== -->
+  <section
+    id="opening-cover"
+    class="fixed inset-0 z-50 flex flex-col justify-between bg-gradient-to-b from-[#695257] via-[#7A6368] to-[#36292D] text-ivory transition-all duration-700 ease-out overflow-hidden select-none touch-none"
+  >
+    <!-- Foto Latar Sampul Tanpa Bingkai dengan Gerakan Halus -->
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+      <img
+        src="001.jpg"
+        data-photo-file="001.jpg"
+        data-fallback-src="https://placehold.co/900x1400/695257/FFFDFB?text=Sukma+%26+Riksi"
+        onerror="window.handleSmartPhotoError(this)"
+        alt="Sampul Undangan Sukma & Riksi"
+        class="w-full h-full object-cover object-[50%_22%] animate-ken-burns opacity-90"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#2B1F23]/65 via-[#2B1F23]/20 to-[#23181B]/90"></div>
+    </div>
+
+    <!-- Bagian Atas Sampul: Tipografi Inisial Minimalis S & R -->
+    <div class="relative z-20 pt-10 sm:pt-12 px-6 text-center max-w-lg mx-auto w-full">
+      <p class="animate-cover-in-1 text-[10px] sm:text-xs uppercase tracking-[0.36em] text-ivory/90 font-medium mb-2.5 drop-shadow">
+        The Wedding Of
+      </p>
+
+      <!-- Tipografi Inisial Minimalis S & R (Tanpa Lingkaran) -->
+      <div
+        aria-label="Inisial Pernikahan S dan R"
+        class="animate-cover-in-2 flex items-center justify-center gap-3 sm:gap-4 my-1.5 select-none"
+      >
+        <div class="flex items-center">
+          <span class="h-px w-8 sm:w-12 bg-gradient-to-r from-transparent to-[#E5C687]/80"></span>
+          <span class="w-1 h-1 rotate-45 bg-[#E5C687]/85"></span>
+        </div>
+
+        <div class="inline-flex items-baseline justify-center drop-shadow-[0_3px_14px_rgba(25,18,20,0.5)]">
+          <span class="font-serif text-5xl sm:text-6xl font-medium tracking-[0.06em] text-ivory leading-none">
+            S
+          </span>
+          <span class="font-script text-3xl sm:text-4xl text-[#E5C687] mx-2 sm:mx-2.5 leading-none">
+            &amp;
+          </span>
+          <span class="font-serif text-5xl sm:text-6xl font-medium tracking-[0.06em] text-ivory leading-none">
+            R
+          </span>
+        </div>
+
+        <div class="flex items-center">
+          <span class="w-1 h-1 rotate-45 bg-[#E5C687]/85"></span>
+          <span class="h-px w-8 sm:w-12 bg-gradient-to-l from-transparent to-[#E5C687]/80"></span>
+        </div>
+      </div>
+
+      <p class="animate-cover-in-3 font-serif text-xs sm:text-sm tracking-[0.28em] uppercase text-ivory/90 mt-2.5 drop-shadow">
+        20 . 12 . 2026
+      </p>
+    </div>
+
+    <!-- Bagian Bawah Sampul: Kartu Sapaan Tamu & Tombol Buka Undangan -->
+    <div class="relative z-20 pb-5 sm:pb-7 px-5 text-center max-w-md mx-auto w-full">
+      <div class="animate-cover-in-4 bg-[#23191C]/55 backdrop-blur-md border border-ivory/25 rounded-3xl px-5 py-4 mb-4 shadow-[0_14px_34px_rgba(0,0,0,0.35)]">
+        <p class="text-[11px] uppercase tracking-[0.22em] text-[#E5C687] font-medium mb-1">
+          Kepada Yth. Bapak/Ibu/Saudara/i
+        </p>
+        <h1 id="cover-guest-name" class="font-serif text-xl sm:text-2xl font-bold text-ivory leading-snug">
+          Tamu Undangan
+        </h1>
+        <p class="text-[11px] text-ivory/80 mt-1">
+          Tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir di acara pernikahan kami.
+        </p>
+      </div>
+
+      <button
+        id="scroll-swipe-cue"
+        type="button"
+        class="animate-cover-in-5 inline-flex items-center gap-2 bg-ivory/95 hover:bg-ivory text-cocoa font-semibold text-xs px-5 py-2.5 rounded-full shadow-lg border border-[#E5C687]/60 transition cursor-pointer"
+      >
+        <svg class="w-4 h-4 text-dusty-dark animate-swipe-cue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+        <span>Ketuk atau Geser ke Atas</span>
+      </button>
+
+      <!-- Kredit Studio di Bagian Bawah Sampul -->
+      <div class="animate-cover-in-5 mt-3.5 flex items-center justify-center gap-2 text-[10px] tracking-[0.2em] uppercase text-ivory/75">
+        <span class="h-px w-5 bg-[#E5C687]/55"></span>
+        <span>by <strong class="font-serif text-xs font-semibold tracking-wider text-ivory/95 normal-case">Ark Production</strong></span>
+        <span class="h-px w-5 bg-[#E5C687]/55"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- KONTEN UTAMA UNDANGAN (MAIN INVITATION CONTENT)                       -->
+  <!-- ===================================================================== -->
+  <main id="main-content" class="relative z-20 pb-10">
+
+    <!-- =================================================================== -->
+    <!-- 2. HERO HEADER (PEMBUKA UTAMA)                                      -->
+    <!-- =================================================================== -->
+    <header id="hero-section" class="relative pt-14 pb-16 sm:pt-20 sm:pb-20 px-4 text-center overflow-hidden bg-gradient-to-b from-ivory via-blush to-blush">
+      <div class="max-w-3xl mx-auto">
+        <div class="scroll-reveal reveal-from-up inline-flex items-center gap-2 bg-blush-deep/80 border border-dusty/25 text-dusty-dark text-xs font-medium px-4 py-1.5 rounded-full mb-5">
+          <span>Undangan Walimatul 'Ursy</span>
+        </div>
+
+        <p class="scroll-reveal reveal-from-up reveal-delay-100 font-serif italic text-lg sm:text-xl text-taupe mb-2">
+          Dengan memohon rahmat dan ridho Allah SWT,
+        </p>
+        <h2 class="scroll-reveal reveal-zoom-in reveal-delay-150 font-script text-5xl sm:text-6xl md:text-7xl text-dusty-dark leading-tight mb-2">
+          Sukma &amp; Riksi
+        </h2>
+        <div class="scroll-reveal reveal-from-up reveal-delay-150 flex items-center justify-center gap-3 mb-4">
+          <span class="h-px w-8 sm:w-12 bg-champagne/50"></span>
+          <p class="font-serif text-sm sm:text-base font-semibold tracking-[0.18em] uppercase text-champagne">
+            Ahad, 20 Desember 2026
+          </p>
+          <span class="h-px w-8 sm:w-12 bg-champagne/50"></span>
+        </div>
+        <p class="scroll-reveal reveal-from-up reveal-delay-200 font-serif text-base sm:text-lg text-cocoa/85 max-w-lg mx-auto mb-7">
+          Bermaksud menyelenggarakan acara pernikahan putra-putri kami dalam mahligai rumah tangga yang penuh keberkahan.
+        </p>
+
+        <!-- Potret Utama Hero dengan Bingkai Offset Double-Line Emas Tipis (002.jpg) -->
+        <div class="scroll-reveal reveal-zoom-in reveal-delay-250 relative mx-auto w-60 sm:w-72 aspect-[3/4] mb-9 flex items-center justify-center animate-photo-float">
+          <div aria-hidden="true" class="pointer-events-none absolute -inset-2 rounded-3xl bg-gradient-to-tr from-dusty/25 via-champagne/20 to-slate/15 blur-xl animate-aura-glow"></div>
+          <div aria-hidden="true" class="pointer-events-none absolute inset-0 translate-x-2.5 translate-y-2.5 sm:translate-x-3 sm:translate-y-3 rounded-2xl border-[1.5px] border-champagne/55 bg-champagne-soft/25"></div>
+          <div class="relative z-10 w-full h-full p-1.5 bg-ivory offset-photo-card">
+            <div class="w-full h-full overflow-hidden rounded-xl bg-blush-deep/40">
+              <img
+                src="002.jpg"
+                data-photo-file="002.jpg"
+                data-fallback-src="https://placehold.co/600x800/F1E1DF/382F32?text=Sukma+%26+Riksi"
+                onerror="window.handleSmartPhotoError(this)"
+                alt="Potret Prewedding Sukma & Riksi"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Pembatas Bunga Pastel -->
+        <div class="scroll-reveal reveal-from-up reveal-delay-300 flex items-center justify-center gap-3 my-4">
+          <span class="h-px w-16 sm:w-24 bg-gradient-to-r from-transparent to-champagne/60"></span>
+          <svg class="w-7 h-7 text-dusty animate-float-slow" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="4" fill="#9A7434"/>
+            <circle cx="16" cy="8" r="5" fill="#AD6D79" fill-opacity="0.7"/>
+            <circle cx="16" cy="24" r="5" fill="#AD6D79" fill-opacity="0.7"/>
+            <circle cx="8" cy="16" r="5" fill="#AD6D79" fill-opacity="0.7"/>
+            <circle cx="24" cy="16" r="5" fill="#AD6D79" fill-opacity="0.7"/>
+          </svg>
+          <span class="h-px w-16 sm:w-24 bg-gradient-to-l from-transparent to-champagne/60"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- =================================================================== -->
+    <!-- 3. UCAPAN MENGUNDANG (SALAM PEMBUKA)                                -->
+    <!-- =================================================================== -->
+    <section id="ucapan-mengundang" class="scroll-mt-8 px-4 py-6 sm:py-10 max-w-4xl mx-auto">
+      <div class="scroll-reveal reveal-zoom-in relative bg-ivory border border-champagne/30 rounded-3xl shadow-sm p-6 sm:p-10 text-center overflow-hidden">
+        <svg aria-hidden="true" class="pointer-events-none absolute -top-3 -left-3 w-28 h-28 opacity-45" viewBox="0 0 120 120" fill="none">
+          <path d="M12 85C24 45 55 22 95 14C75 35 55 58 12 85Z" fill="#AD6D79" fill-opacity="0.22"/>
+          <path d="M10 55C22 28 45 14 75 10C58 26 42 42 10 55Z" fill="#9A7434" fill-opacity="0.22"/>
+          <circle cx="34" cy="34" r="6" fill="#AD6D79" fill-opacity="0.35"/>
+        </svg>
+        <svg aria-hidden="true" class="pointer-events-none absolute -bottom-3 -right-3 w-28 h-28 rotate-180 opacity-45" viewBox="0 0 120 120" fill="none">
+          <path d="M12 85C24 45 55 22 95 14C75 35 55 58 12 85Z" fill="#AD6D79" fill-opacity="0.22"/>
+          <path d="M10 55C22 28 45 14 75 10C58 26 42 42 10 55Z" fill="#9A7434" fill-opacity="0.22"/>
+          <circle cx="34" cy="34" r="6" fill="#AD6D79" fill-opacity="0.35"/>
+        </svg>
+
+        <p class="scroll-reveal reveal-from-up font-serif italic text-xl sm:text-2xl text-champagne font-semibold mb-2">
+          Bismillahirrahmanirrahim
+        </p>
+        <h3 class="scroll-reveal reveal-from-up reveal-delay-100 font-serif text-xl sm:text-2xl font-semibold text-cocoa mb-3">
+          Assalamu'alaikum Warahmatullahi Wabarakatuh
+        </h3>
+        <p class="scroll-reveal reveal-from-up reveal-delay-200 text-sm sm:text-base text-taupe leading-relaxed max-w-2xl mx-auto">
+          Maha Suci Allah SWT yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah, perkenankanlah kami merangkaikan kasih sayang yang Kau tumbuhkan di antara putra-putri kami untuk melaksanakan syariat-Mu dalam ikatan pernikahan yang suci:
+        </p>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 4. PROFIL MEMPELAI (OPEN EDITORIAL LAYOUT — FOTO EKSKLUSIF PROFIL) -->
+    <!-- =================================================================== -->
+    <section id="mempelai" class="scroll-mt-8 px-4 sm:px-6 py-8 sm:py-12 max-w-4xl mx-auto overflow-hidden">
+      <div class="space-y-8 sm:space-y-11">
+        <!-- Profil Mempelai Wanita: Foto Kiri (009.jpg), Keterangan Kanan -->
+        <div class="flex items-center gap-6 sm:gap-12">
+          <div class="scroll-reveal reveal-from-left shrink-0 flex justify-center">
+            <div class="relative w-32 h-40 sm:w-48 sm:h-60 flex items-center justify-center animate-photo-float">
+              <div aria-hidden="true" class="pointer-events-none absolute -inset-2 rounded-2xl bg-gradient-to-tr from-dusty/25 via-champagne/20 to-blush-deep blur-lg animate-aura-glow"></div>
+              <div aria-hidden="true" class="pointer-events-none absolute inset-0 translate-x-2 translate-y-2 sm:translate-x-3 sm:translate-y-3 rounded-2xl border-[1.25px] border-champagne/60 bg-ivory/40"></div>
+              <div class="relative z-10 w-full h-full p-1 sm:p-1.5 bg-ivory offset-photo-card-sm">
+                <div class="w-full h-full overflow-hidden rounded-xl bg-blush/50">
+                  <img
+                    src="009.jpg"
+                    data-photo-file="009.jpg"
+                    data-fallback-src="https://placehold.co/400x500/F1E1DF/884B57?text=Sukmawati"
+                    onerror="window.handleSmartPhotoError(this)"
+                    alt="Sukmawati, S.Pd"
+                    class="w-full h-full object-cover object-[70%_20%] scale-125"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scroll-reveal reveal-from-right reveal-delay-150 flex-1 min-w-0 pl-1 sm:pl-2 text-left">
+            <span class="inline-block text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-dusty-dark font-semibold bg-ivory/90 border border-dusty/25 px-3.5 py-1 rounded-full shadow-2xs mb-2.5">
+              Mempelai Wanita
+            </span>
+            <h4 class="font-serif text-2xl sm:text-3xl md:text-[34px] font-bold text-cocoa leading-tight mb-2">
+              Sukmawati, S.Pd
+            </h4>
+            <div class="w-10 h-px bg-champagne/55 mb-2.5"></div>
+            <p class="text-xs sm:text-sm text-taupe leading-relaxed">
+              Putri Pertama dari<br />
+              <span class="font-semibold text-cocoa">Bapak Gugum Gumilar &amp; Ibu Otih Suhartini</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Pembatas Simbol "&" -->
+        <div class="scroll-reveal reveal-zoom-in flex items-center justify-center gap-4 py-1">
+          <span class="h-px w-16 sm:w-28 bg-gradient-to-r from-transparent to-champagne/65"></span>
+          <span class="font-script text-3xl sm:text-4xl text-champagne">&amp;</span>
+          <span class="h-px w-16 sm:w-28 bg-gradient-to-l from-transparent to-champagne/65"></span>
+        </div>
+
+        <!-- Profil Mempelai Pria: Keterangan Kiri, Foto Kanan (005.jpg) -->
+        <div class="flex items-center gap-6 sm:gap-12">
+          <div class="scroll-reveal reveal-from-left reveal-delay-150 flex-1 min-w-0 pr-1 sm:pr-2 text-right">
+            <span class="inline-block text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-slate font-semibold bg-ivory/90 border border-slate/25 px-3.5 py-1 rounded-full shadow-2xs mb-2.5">
+              Mempelai Pria
+            </span>
+            <h4 class="font-serif text-2xl sm:text-3xl md:text-[34px] font-bold text-cocoa leading-tight mb-2">
+              Riksi Yusuf Tajiri
+            </h4>
+            <div class="w-10 h-px bg-champagne/55 ml-auto mb-2.5"></div>
+            <p class="text-xs sm:text-sm text-taupe leading-relaxed">
+              Putra Pertama dari<br />
+              <span class="font-semibold text-cocoa">Bapak (Alm.) Iyat Ruhiyat &amp; Ibu Rohimah</span>
+            </p>
+          </div>
+
+          <div class="scroll-reveal reveal-from-right shrink-0 flex justify-center">
+            <div class="relative w-32 h-40 sm:w-48 sm:h-60 flex items-center justify-center animate-photo-float-delay">
+              <div aria-hidden="true" class="pointer-events-none absolute -inset-2 rounded-2xl bg-gradient-to-tr from-slate/20 via-champagne/20 to-dusty/15 blur-lg animate-aura-glow"></div>
+              <div aria-hidden="true" class="pointer-events-none absolute inset-0 -translate-x-2 translate-y-2 sm:-translate-x-3 sm:translate-y-3 rounded-2xl border-[1.25px] border-champagne/60 bg-ivory/40"></div>
+              <div class="relative z-10 w-full h-full p-1 sm:p-1.5 bg-ivory offset-photo-card-sm">
+                <div class="w-full h-full overflow-hidden rounded-xl bg-slate-soft/60">
+                  <img
+                    src="005.jpg"
+                    data-photo-file="005.jpg"
+                    data-fallback-src="https://placehold.co/400x500/EEF1F5/4E5A67?text=Riksi"
+                    onerror="window.handleSmartPhotoError(this)"
+                    alt="Riksi Yusuf Tajiri"
+                    class="w-full h-full object-cover object-[30%_20%] scale-125"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 5. HADIST & DOA PERNIKAHAN                                          -->
+    <!-- =================================================================== -->
+    <section id="hadist" class="scroll-mt-8 px-4 py-6 sm:py-10 max-w-4xl mx-auto">
+      <div class="scroll-reveal reveal-zoom-in bg-gradient-to-br from-ivory via-blush/90 to-champagne-soft/55 border border-dusty/25 rounded-3xl p-6 sm:p-10 text-center shadow-sm">
+        <p class="scroll-reveal reveal-from-up text-xs uppercase tracking-[0.25em] text-dusty-dark font-semibold mb-2">
+          Doa &amp; Sunnah Pernikahan
+        </p>
+        <h3 class="scroll-reveal reveal-from-up reveal-delay-100 font-serif text-2xl sm:text-3xl font-bold text-cocoa mb-5">
+          Menyempurnakan Separuh Agama
+        </h3>
+
+        <div class="scroll-reveal reveal-zoom-in reveal-delay-150 bg-ivory/90 border border-champagne/30 rounded-2xl p-5 sm:p-7 max-w-2xl mx-auto mb-5">
+          <p class="font-serif italic text-lg sm:text-xl text-cocoa leading-relaxed mb-3">
+            “Apabila seorang hamba menikah, maka sungguh ia telah menyempurnakan separuh agamanya; hendaklah ia bertakwa kepada Allah pada separuh yang tersisa.”
+          </p>
+          <span class="inline-block text-xs font-semibold tracking-wider uppercase text-champagne">
+            — HR. Al-Baihaqi
+          </span>
+        </div>
+
+        <p class="scroll-reveal reveal-from-up reveal-delay-200 font-serif italic text-sm sm:text-base text-taupe max-w-2xl mx-auto leading-relaxed">
+          “Semoga Allah menghimpun yang terserak dari keduanya, memberkahi mereka berdua, meningkatkan kualitas keturunannya, serta menjadikan pernikahan ini sebagai pembuka pintu rahmat, sumber ilmu dan hikmah, serta membawa ketenteraman bagi keluarga dan sesama.”
+        </p>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 6. KISAH CINTA (HORIZONTAL SWIPE STORY — FOTO ATAS & CERITA LEBAR)  -->
+    <!-- =================================================================== -->
+    <section id="kisah" class="scroll-mt-8 py-8 sm:py-12 max-w-5xl mx-auto overflow-hidden">
+      <div class="scroll-reveal reveal-zoom-in text-center mb-6 px-4">
+        <p class="text-xs uppercase tracking-[0.25em] text-dusty-dark font-semibold mb-1.5">
+          Our Journey
+        </p>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-cocoa mb-2">
+          Kisah Cinta Kami
+        </h3>
+        <p class="text-sm text-taupe max-w-lg mx-auto">
+          Geser kartu ke samping untuk membaca keempat babak perjalanan cinta kami menuju gerbang kehidupan baru bersama.
+        </p>
+      </div>
+
+      <!-- Kontainer Kartu Cerita Geser ke Samping -->
+      <div
+        id="story-carousel"
+        class="flex overflow-x-auto no-scrollbar snap-x snap-mandatory touch-pan-x gap-4 sm:gap-6 px-5 sm:px-8 py-3 select-none cursor-grab active:cursor-grabbing"
+      >
+        <!-- Bab I -->
+        <article
+          data-story-index="0"
+          class="story-card scroll-reveal reveal-zoom-in reveal-delay-100 snap-center shrink-0 w-[84vw] max-w-[350px] sm:w-[340px] md:w-[360px] bg-ivory border border-dusty/25 rounded-3xl p-5 sm:p-6 shadow-sm flex flex-col justify-between"
+        >
+          <div>
+            <!-- Foto di Bagian Atas dengan Bingkai Offset Double-Line -->
+            <div class="relative w-full aspect-[4/3] mb-6 pr-2 pb-2">
+              <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/25"></div>
+              <div class="relative z-10 w-full h-full p-1.5 bg-ivory offset-photo-card-sm">
+                <div class="w-full h-full overflow-hidden rounded-xl bg-blush/50">
+                  <img
+                    src="003.jpg"
+                    data-photo-file="003.jpg"
+                    data-fallback-src="https://placehold.co/600x450/F1E1DF/884B57?text=Bab+I"
+                    onerror="window.handleSmartPhotoError(this)"
+                    alt="Awal Pertemuan Riksi & Sukma"
+                    draggable="false"
+                    class="w-full h-full object-cover object-[50%_20%]"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Cerita Lebar Penuh di Bagian Bawah -->
+            <div class="text-left">
+              <span class="inline-block text-[11px] font-semibold text-dusty-dark bg-blush border border-dusty/20 px-3 py-0.5 rounded-full mb-2">
+                Bab I &bull; Oktober 2025
+              </span>
+              <h4 class="font-serif text-xl sm:text-2xl font-bold text-cocoa leading-snug mb-2">
+                Pertemuan yang Tak Terduga
+              </h4>
+              <p class="text-xs sm:text-sm text-taupe leading-relaxed">
+                Segalanya bermula dari sebuah kunjungan sederhana pada bulan Oktober 2025. Saat itu, Riksi datang bertamu ke kediaman Sukma dalam rangka silaturahmi. Namun, dari percakapan yang hangat dan sapaan yang tulus di hari itu, semesta perlahan membuka pintu perkenalan yang berkesan di hati keduanya.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-3 border-t border-dusty/15 flex items-center justify-between text-[11px] text-taupe/80">
+            <span>01 / 04</span>
+            <span class="font-serif italic text-dusty-dark">Awal Perkenalan</span>
+          </div>
+        </article>
+
+        <!-- Bab II -->
+        <article
+          data-story-index="1"
+          class="story-card scroll-reveal reveal-zoom-in reveal-delay-150 snap-center shrink-0 w-[84vw] max-w-[350px] sm:w-[340px] md:w-[360px] bg-ivory border border-champagne/30 rounded-3xl p-5 sm:p-6 shadow-sm flex flex-col justify-between"
+        >
+          <div>
+            <!-- Foto di Bagian Atas dengan Bingkai Offset Double-Line -->
+            <div class="relative w-full aspect-[4/3] mb-6 pr-2 pb-2">
+              <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/25"></div>
+              <div class="relative z-10 w-full h-full p-1.5 bg-ivory offset-photo-card-sm">
+                <div class="w-full h-full overflow-hidden rounded-xl bg-champagne-soft/50">
+                  <img
+                    src="006.jpg"
+                    data-photo-file="006.jpg"
+                    data-fallback-src="https://placehold.co/600x450/F7EFE1/9A7434?text=Bab+II"
+                    onerror="window.handleSmartPhotoError(this)"
+                    alt="Mengikat Janji Riksi & Sukma"
+                    draggable="false"
+                    class="w-full h-full object-cover object-[50%_20%]"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Cerita Lebar Penuh di Bagian Bawah -->
+            <div class="text-left">
+              <span class="inline-block text-[11px] font-semibold text-champagne bg-champagne-soft border border-champagne/25 px-3 py-0.5 rounded-full mb-2">
+                Bab II &bull; 1 Desember 2025
+              </span>
+              <h4 class="font-serif text-xl sm:text-2xl font-bold text-cocoa leading-snug mb-2">
+                Mengikat Janji dalam Kesungguhan
+              </h4>
+              <p class="text-xs sm:text-sm text-taupe leading-relaxed">
+                Seiring waktu berjalan, komunikasi yang semula berawal dari silaturahmi tumbuh menjadi rasa nyaman dan saling memahami. Tepat pada tanggal 1 Desember 2025, Riksi dan Sukma sepakat mengikat janji—memilih untuk menata langkah dengan niat yang serius dan tujuan yang sama.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-3 border-t border-champagne/20 flex items-center justify-between text-[11px] text-taupe/80">
+            <span>02 / 04</span>
+            <span class="font-serif italic text-champagne">Komitmen Hati</span>
+          </div>
+        </article>
+
+        <!-- Bab III -->
+        <article
+          data-story-index="2"
+          class="story-card scroll-reveal reveal-zoom-in reveal-delay-200 snap-center shrink-0 w-[84vw] max-w-[350px] sm:w-[340px] md:w-[360px] bg-ivory border border-dusty/25 rounded-3xl p-5 sm:p-6 shadow-sm flex flex-col justify-between"
+        >
+          <div>
+            <!-- Foto di Bagian Atas dengan Bingkai Offset Double-Line -->
+            <div class="relative w-full aspect-[4/3] mb-6 pr-2 pb-2">
+              <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/25"></div>
+              <div class="relative z-10 w-full h-full p-1.5 bg-ivory offset-photo-card-sm">
+                <div class="w-full h-full overflow-hidden rounded-xl bg-blush/50">
+                  <img
+                    src="008.jpg"
+                    data-photo-file="008.jpg"
+                    data-fallback-src="https://placehold.co/600x450/F1E1DF/884B57?text=Bab+III"
+                    onerror="window.handleSmartPhotoError(this)"
+                    alt="Khitbah Dua Keluarga"
+                    draggable="false"
+                    class="w-full h-full object-cover object-[50%_20%]"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Cerita Lebar Penuh di Bagian Bawah -->
+            <div class="text-left">
+              <span class="inline-block text-[11px] font-semibold text-dusty-dark bg-blush border border-dusty/20 px-3 py-0.5 rounded-full mb-2">
+                Bab III &bull; 16 Agustus 2026
+              </span>
+              <h4 class="font-serif text-xl sm:text-2xl font-bold text-cocoa leading-snug mb-2">
+                Khitbah &amp; Restu Dua Keluarga
+              </h4>
+              <p class="text-xs sm:text-sm text-taupe leading-relaxed">
+                Kesungguhan itu kemudian dibawa ke hadapan orang-orang terkasih pada tanggal 16 Agustus 2026, ketika dua keluarga besar bertemu dalam suasana hangat acara khitbah. Di hari penuh syukur tersebut, niat baik Riksi disambut restu keluarga Sukma, mengukuhkan langkah menuju ikatan yang diridhai Allah SWT.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-3 border-t border-dusty/15 flex items-center justify-between text-[11px] text-taupe/80">
+            <span>03 / 04</span>
+            <span class="font-serif italic text-dusty-dark">Ikatan Khitbah</span>
+          </div>
+        </article>
+
+        <!-- Bab IV -->
+        <article
+          data-story-index="3"
+          class="story-card scroll-reveal reveal-zoom-in reveal-delay-250 snap-center shrink-0 w-[84vw] max-w-[350px] sm:w-[340px] md:w-[360px] bg-ivory border border-slate/25 rounded-3xl p-5 sm:p-6 shadow-sm flex flex-col justify-between"
+        >
+          <div>
+            <!-- Foto di Bagian Atas dengan Bingkai Offset Double-Line -->
+            <div class="relative w-full aspect-[4/3] mb-6 pr-2 pb-2">
+              <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/25"></div>
+              <div class="relative z-10 w-full h-full p-1.5 bg-ivory offset-photo-card-sm">
+                <div class="w-full h-full overflow-hidden rounded-xl bg-slate-soft/60">
+                  <img
+                    src="010.jpg"
+                    data-photo-file="010.jpg"
+                    data-fallback-src="https://placehold.co/600x450/EEF1F5/4E5A67?text=Bab+IV"
+                    onerror="window.handleSmartPhotoError(this)"
+                    alt="Akad & Resepsi Pernikahan"
+                    draggable="false"
+                    class="w-full h-full object-cover object-[50%_20%]"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Cerita Lebar Penuh di Bagian Bawah -->
+            <div class="text-left">
+              <span class="inline-block text-[11px] font-semibold text-slate bg-slate-soft border border-slate/20 px-3 py-0.5 rounded-full mb-2">
+                Bab IV &bull; 18 &amp; 20 Desember 2026
+              </span>
+              <h4 class="font-serif text-xl sm:text-2xl font-bold text-cocoa leading-snug mb-2">
+                Menuju Akad &amp; Hari Bahagia
+              </h4>
+              <p class="text-xs sm:text-sm text-taupe leading-relaxed">
+                Segala doa dan penantian yang dirajut sejak akhir tahun 2025 kini tiba pada puncaknya. InsyaAllah, pada tanggal 18 Desember 2026 kami akan mengucap janji suci dalam prosesi Akad Nikah, yang kemudian dilanjutkan dengan acara Resepsi Pernikahan pada tanggal 20 Desember 2026.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-3 border-t border-slate/15 flex items-center justify-between text-[11px] text-taupe/80">
+            <span>04 / 04</span>
+            <span class="font-serif italic text-slate">Lembaran Baru</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Kontrol Geser & Indikator Titik Babak Cerita -->
+      <div class="scroll-reveal reveal-from-up mt-3 px-4 flex items-center justify-center gap-4">
+        <button
+          id="story-prev-btn"
+          type="button"
+          aria-label="Bab Cerita Sebelumnya"
+          class="bg-ivory hover:bg-blush-deep text-dusty-dark border border-dusty/30 p-2 rounded-full shadow-xs transition cursor-pointer"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <div class="flex items-center gap-2" role="tablist" aria-label="Navigasi Bab Kisah Cinta">
+          <button
+            type="button"
+            data-story-target="0"
+            aria-label="Bab I"
+            class="story-dot-btn h-2 w-7 rounded-full bg-dusty-dark transition-all duration-300 cursor-pointer"
+          ></button>
+          <button
+            type="button"
+            data-story-target="1"
+            aria-label="Bab II"
+            class="story-dot-btn h-2 w-2 rounded-full bg-dusty/30 hover:bg-dusty/60 transition-all duration-300 cursor-pointer"
+          ></button>
+          <button
+            type="button"
+            data-story-target="2"
+            aria-label="Bab III"
+            class="story-dot-btn h-2 w-2 rounded-full bg-dusty/30 hover:bg-dusty/60 transition-all duration-300 cursor-pointer"
+          ></button>
+          <button
+            type="button"
+            data-story-target="3"
+            aria-label="Bab IV"
+            class="story-dot-btn h-2 w-2 rounded-full bg-dusty/30 hover:bg-dusty/60 transition-all duration-300 cursor-pointer"
+          ></button>
+        </div>
+
+        <button
+          id="story-next-btn"
+          type="button"
+          aria-label="Bab Cerita Berikutnya"
+          class="bg-ivory hover:bg-blush-deep text-dusty-dark border border-dusty/30 p-2 rounded-full shadow-xs transition cursor-pointer"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 7. HITUNG MUNDUR (COUNTDOWN)                                        -->
+    <!-- =================================================================== -->
+    <section id="countdown" class="scroll-mt-8 px-4 py-6 sm:py-10 max-w-4xl mx-auto">
+      <div class="scroll-reveal reveal-zoom-in bg-gradient-to-br from-ivory via-champagne-soft/65 to-blush-deep/65 border border-champagne/30 rounded-3xl p-6 sm:p-10 text-center shadow-sm">
+        <p class="scroll-reveal reveal-from-up text-xs uppercase tracking-[0.25em] text-champagne font-semibold mb-2">
+          Hitung Mundur Acara
+        </p>
+        <h3 class="scroll-reveal reveal-from-up reveal-delay-100 font-serif text-2xl sm:text-3xl font-bold text-cocoa mb-2">
+          Menuju Hari Istimewa Kami
+        </h3>
+        <p id="countdown-target-label" class="scroll-reveal reveal-from-up reveal-delay-150 text-xs sm:text-sm text-taupe mb-6">
+          Resepsi Pernikahan • Ahad, 20 Desember 2026 • Pukul 10.00 WIB
+        </p>
+
+        <div class="grid grid-cols-4 gap-2.5 sm:gap-4 max-w-lg mx-auto">
+          <div class="scroll-reveal reveal-zoom-in reveal-delay-100 bg-ivory border border-dusty/25 rounded-2xl py-3.5 px-2 shadow-sm">
+            <span id="cd-days" class="block font-serif text-2xl sm:text-4xl font-bold text-dusty-dark">00</span>
+            <span class="text-[11px] sm:text-xs text-taupe font-medium">Hari</span>
+          </div>
+          <div class="scroll-reveal reveal-zoom-in reveal-delay-150 bg-ivory border border-dusty/25 rounded-2xl py-3.5 px-2 shadow-sm">
+            <span id="cd-hours" class="block font-serif text-2xl sm:text-4xl font-bold text-dusty-dark">00</span>
+            <span class="text-[11px] sm:text-xs text-taupe font-medium">Jam</span>
+          </div>
+          <div class="scroll-reveal reveal-zoom-in reveal-delay-200 bg-ivory border border-dusty/25 rounded-2xl py-3.5 px-2 shadow-sm">
+            <span id="cd-minutes" class="block font-serif text-2xl sm:text-4xl font-bold text-dusty-dark">00</span>
+            <span class="text-[11px] sm:text-xs text-taupe font-medium">Menit</span>
+          </div>
+          <div class="scroll-reveal reveal-zoom-in reveal-delay-250 bg-ivory border border-dusty/25 rounded-2xl py-3.5 px-2 shadow-sm">
+            <span id="cd-seconds" class="block font-serif text-2xl sm:text-4xl font-bold text-dusty-dark">00</span>
+            <span class="text-[11px] sm:text-xs text-taupe font-medium">Detik</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 8. SUSUNAN ACARA & PETA LOKASI (EDITORIAL TIMELINE & VENUE)         -->
+    <!-- =================================================================== -->
+    <section id="acara" class="scroll-mt-8 px-4 py-10 sm:py-14 max-w-4xl mx-auto overflow-hidden">
+      <!-- Tajuk Editorial -->
+      <div class="scroll-reveal reveal-zoom-in text-center mb-10">
+        <p class="text-xs uppercase tracking-[0.28em] text-champagne font-semibold mb-1.5">
+          Save The Date
+        </p>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-cocoa mb-2.5">
+          Rangkaian Acara
+        </h3>
+        <div class="flex items-center justify-center gap-3 mb-3">
+          <span class="h-px w-10 bg-champagne/45"></span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-dusty"></span>
+          <span class="h-px w-10 bg-champagne/45"></span>
+        </div>
+        <p class="text-xs sm:text-sm text-taupe max-w-md mx-auto leading-relaxed">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.
+        </p>
+      </div>
+
+      <!-- Susunan Acara Mengalir (Editorial Split dengan Tipografi Kalender) -->
+      <div class="relative max-w-3xl mx-auto">
+        <!-- Ornamen Penghubung Tengah di Layar Lebar -->
+        <div aria-hidden="true" class="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+          <div class="w-10 h-10 rounded-full bg-blush border border-champagne/50 flex items-center justify-center shadow-xs">
+            <svg class="w-4 h-4 text-champagne" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-stretch">
+          <!-- 01. AKAD NIKAH -->
+          <div class="scroll-reveal reveal-from-left reveal-delay-100 relative pr-2 pb-2">
+            <div aria-hidden="true" class="pointer-events-none absolute top-2.5 left-2.5 right-0 bottom-0 rounded-3xl border-[1.25px] border-champagne/55 bg-champagne-soft/30"></div>
+
+            <div class="relative z-10 h-full bg-ivory border border-dusty/25 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col justify-between text-center">
+              <div>
+                <span class="inline-block text-[10px] uppercase tracking-[0.24em] text-dusty-dark font-semibold bg-blush border border-dusty/20 px-3.5 py-1 rounded-full mb-4">
+                  01 &bull; Prosesi Ijab Qabul
+                </span>
+
+                <h4 class="font-script text-3xl sm:text-4xl text-dusty-dark leading-none mb-4">
+                  Akad Nikah
+                </h4>
+
+                <!-- Tipografi Tanggal Besar ala Undangan Cetak -->
+                <div class="flex items-center justify-center gap-3.5 py-3.5 my-2 border-y border-champagne/25">
+                  <span class="font-serif text-5xl sm:text-6xl font-bold text-cocoa leading-none">
+                    18
+                  </span>
+                  <div class="text-left">
+                    <p class="font-serif text-base sm:text-lg font-bold text-cocoa leading-tight">
+                      Jum'at
+                    </p>
+                    <p class="text-xs sm:text-sm text-champagne font-semibold tracking-wide">
+                      Desember 2026
+                    </p>
+                    <p class="text-[11px] text-taupe mt-0.5">
+                      08.00 WIB — Selesai
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Lokasi Akad -->
+                <div class="mt-4">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-taupe/80 font-medium mb-1">
+                    Bertempat di
+                  </p>
+                  <p class="font-serif text-lg sm:text-xl font-bold text-cocoa leading-snug">
+                    Kediaman Mempelai Wanita
+                  </p>
+                  <p class="text-xs text-taupe mt-0.5">
+                    Keluarga Besar Sukmawati, S.Pd
+                  </p>
+                </div>
+              </div>
+
+              <p class="mt-6 pt-3.5 border-t border-dusty/15 font-serif italic text-xs sm:text-sm text-taupe">
+                “Mohon doa restu untuk kelancaran prosesi akad nikah kami.”
+              </p>
+            </div>
+          </div>
+
+          <!-- Ornamen Penghubung Mobile di Antara Akad & Resepsi -->
+          <div class="flex md:hidden items-center justify-center gap-3 -my-2">
+            <span class="h-px w-12 bg-gradient-to-r from-transparent to-champagne/50"></span>
+            <span class="w-7 h-7 rounded-full bg-ivory border border-champagne/45 flex items-center justify-center text-champagne shadow-2xs">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" />
+              </svg>
+            </span>
+            <span class="h-px w-12 bg-gradient-to-l from-transparent to-champagne/50"></span>
+          </div>
+
+          <!-- 02. RESEPSI PERNIKAHAN -->
+          <div class="scroll-reveal reveal-from-right reveal-delay-200 relative pr-2 pb-2">
+            <div aria-hidden="true" class="pointer-events-none absolute top-2.5 left-2.5 right-0 bottom-0 rounded-3xl border-[1.25px] border-champagne/55 bg-champagne-soft/30"></div>
+
+            <div class="relative z-10 h-full bg-ivory border border-champagne/35 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col justify-between text-center">
+              <div>
+                <span class="inline-block text-[10px] uppercase tracking-[0.24em] text-champagne font-semibold bg-champagne-soft border border-champagne/25 px-3.5 py-1 rounded-full mb-4">
+                  02 &bull; Walimatul 'Ursy
+                </span>
+
+                <h4 class="font-script text-3xl sm:text-4xl text-cocoa leading-none mb-4">
+                  Resepsi Pernikahan
+                </h4>
+
+                <!-- Tipografi Tanggal Besar ala Undangan Cetak -->
+                <div class="flex items-center justify-center gap-3.5 py-3.5 my-2 border-y border-champagne/25">
+                  <span class="font-serif text-5xl sm:text-6xl font-bold text-dusty-dark leading-none">
+                    20
+                  </span>
+                  <div class="text-left">
+                    <p class="font-serif text-base sm:text-lg font-bold text-cocoa leading-tight">
+                      Ahad
+                    </p>
+                    <p class="text-xs sm:text-sm text-champagne font-semibold tracking-wide">
+                      Desember 2026
+                    </p>
+                    <p class="text-[11px] text-taupe mt-0.5">
+                      10.00 WIB — Selesai
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Lokasi Resepsi -->
+                <div class="mt-4">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-taupe/80 font-medium mb-1">
+                    Bertempat di
+                  </p>
+                  <p class="font-serif text-lg sm:text-xl font-bold text-cocoa leading-snug">
+                    Kp. Jayanti RT. 03 RW. 01
+                  </p>
+                  <p class="text-xs text-taupe leading-relaxed mt-0.5">
+                    Desa Mekarsari, Kec. Ciparay, Kab. Bandung
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=-7.037170%2C107.743639"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 w-full bg-dusty-dark hover:bg-dusty text-ivory font-medium text-xs sm:text-sm py-3 px-4 rounded-full shadow-xs transition-all duration-300"
+                >
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>Petunjuk Arah Google Maps</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pratinjau Peta Lokasi Editorial & Presisi Titik Kp. Jayanti -->
+      <div class="scroll-reveal reveal-zoom-in reveal-delay-250 mt-10 max-w-3xl mx-auto">
+        <div class="relative pr-2 pb-2">
+          <!-- Bingkai Ganda Bergeser Emas Champagne (Selaras dengan Kartu Acara & Foto) -->
+          <div aria-hidden="true" class="pointer-events-none absolute top-2.5 left-2.5 right-0 bottom-0 rounded-3xl border-[1.25px] border-champagne/55 bg-champagne-soft/30"></div>
+
+          <div class="relative z-10 bg-ivory border border-champagne/35 rounded-3xl p-5 sm:p-7 shadow-sm">
+            <!-- Tajuk Lokasi & Kontrol Mode Peta -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3.5 pb-4 mb-4 border-b border-champagne/20">
+              <div class="text-left">
+                <div class="inline-flex items-center gap-2 bg-blush border border-dusty/25 text-dusty-dark text-[10px] uppercase tracking-[0.2em] font-semibold px-3 py-1 rounded-full mb-2">
+                  <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-dusty opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-dusty-dark"></span>
+                  </span>
+                  <span>Titik Lokasi Acara</span>
+                </div>
+                <h4 class="font-serif text-xl sm:text-2xl font-bold text-cocoa leading-snug">
+                  Kediaman Mempelai Wanita
+                </h4>
+                <p class="text-xs text-taupe leading-relaxed mt-0.5">
+                  Kp. Jayanti RT. 03 RW. 01, Desa Mekarsari, Kec. Ciparay, Kab. Bandung 40381
+                </p>
+              </div>
+
+              <!-- Kontrol Beralih Mode Peta / Satelit & Fokus Titik -->
+              <div class="flex flex-wrap items-center gap-2 self-start sm:self-end shrink-0">
+                <div class="inline-flex items-center bg-blush/80 border border-dusty/20 rounded-full p-1" role="group" aria-label="Tampilan Peta">
+                  <button
+                    type="button"
+                    data-map-type="m"
+                    class="map-type-btn text-[11px] font-semibold px-3 py-1 rounded-full bg-dusty-dark text-ivory shadow-2xs transition cursor-pointer"
+                  >
+                    Peta
+                  </button>
+                  <button
+                    type="button"
+                    data-map-type="k"
+                    class="map-type-btn text-[11px] font-medium px-3 py-1 rounded-full text-taupe hover:text-cocoa transition cursor-pointer"
+                  >
+                    Satelit
+                  </button>
+                </div>
+
+                <button
+                  id="map-zoom-toggle-btn"
+                  type="button"
+                  data-zoom-mode="pin"
+                  class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-champagne hover:bg-champagne-soft bg-ivory border border-champagne/35 px-3 py-1.5 rounded-full transition cursor-pointer"
+                >
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <circle cx="12" cy="12" r="3" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v3m0 14v3M2 12h3m14 0h3" />
+                  </svg>
+                  <span id="map-zoom-label">Area Sekitar</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Bingkai Peta Lembut dengan Lencana Titik Koordinat -->
+            <div class="relative rounded-2xl overflow-hidden border border-champagne/30 bg-blush/40 shadow-inner">
+              <iframe
+                id="venue-map-iframe"
+                title="Peta Lokasi Presisi Kediaman Mempelai Wanita (-7.037170, 107.743639)"
+                src="https://maps.google.com/maps?q=-7.037170,107.743639&t=m&z=17&ie=UTF8&iwloc=&output=embed"
+                class="w-full h-64 sm:h-76 border-0 sepia-[.10] saturate-[.92] contrast-[1.02]"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              <!-- Lencana Pin Mengambang di Sudut Bawah Peta -->
+              <div class="pointer-events-none absolute bottom-3 left-3 right-3 sm:right-auto z-10">
+                <div class="inline-flex items-center gap-2 bg-ivory/92 backdrop-blur-md border border-champagne/40 rounded-full px-3.5 py-1.5 shadow-md max-w-full">
+                  <svg class="w-3.5 h-3.5 text-dusty-dark shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" />
+                  </svg>
+                  <span class="text-[11px] font-medium text-cocoa truncate">
+                    Kp. Jayanti, Ciparay (-7.037170, 107.743639)
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tombol Aksi Navigasi & Salin Alamat -->
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=-7.037170%2C107.743639"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 text-xs font-semibold text-ivory bg-gradient-to-r from-dusty to-dusty-dark hover:from-dusty-dark hover:to-dusty py-3 px-4 rounded-full shadow-xs transition-all duration-300"
+              >
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+                <span>Buka Rute Google Maps</span>
+              </a>
+
+              <button
+                type="button"
+                data-copy="Kp. Jayanti RT. 03 RW. 01, Desa Mekarsari, Kec. Ciparay, Kab. Bandung 40381 (-7.037170, 107.743639)"
+                class="copy-btn inline-flex items-center justify-center gap-2 text-xs font-semibold text-dusty-dark hover:bg-blush-deep bg-blush border border-dusty/30 py-3 px-4 rounded-full transition-all duration-300 cursor-pointer"
+              >
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                <span>Salin Alamat Lengkap</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 9. GALERI MOMEN BAHAGIA (ALBUM POTRET BERJALAN & GESER KANAN-KIRI)  -->
+    <!-- =================================================================== -->
+    <section id="galeri" class="scroll-mt-8 py-8 sm:py-12 overflow-hidden">
+      <div class="scroll-reveal reveal-zoom-in text-center mb-6 px-4 max-w-4xl mx-auto">
+        <p class="text-xs uppercase tracking-[0.25em] text-dusty-dark font-semibold mb-1.5">
+          Captured Moments
+        </p>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-cocoa mb-2">
+          Album Kenangan Kami
+        </h3>
+        <div class="flex items-center justify-center gap-3 mb-2.5">
+          <span class="h-px w-10 bg-champagne/45"></span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-dusty"></span>
+          <span class="h-px w-10 bg-champagne/45"></span>
+        </div>
+        <p class="text-sm text-taupe max-w-md mx-auto mb-3">
+          Geser ke kanan atau ke kiri untuk menelusuri lembaran kenangan indah kami, atau ketuk foto untuk memperbesar.
+        </p>
+
+        <div class="local-preview-only inline-flex items-center justify-center">
+          <input id="local-photo-loader" type="file" accept="image/*" multiple class="hidden" />
+          <button
+            id="trigger-photo-loader-btn"
+            type="button"
+            class="trigger-photo-loader inline-flex items-center gap-1.5 text-[11px] font-medium text-taupe hover:text-cocoa bg-ivory/90 border border-champagne/35 px-3.5 py-1.5 rounded-full shadow-sm transition cursor-pointer"
+          >
+            <svg class="w-3.5 h-3.5 text-dusty-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span>Muat File Foto Lokal (Pratinjau)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Album Foto Potret Berjalan + Dapat Digeser Kanan & Kiri secara Interaktif -->
+      <div class="scroll-reveal reveal-zoom-in relative w-full">
+        <div
+          id="album-wrapper"
+          class="album-wrapper relative bg-gradient-to-r from-blush via-ivory/80 to-blush border-y border-champagne/30 overflow-hidden"
+        >
+          <!-- Ornamen Garis Tipis Emas di Bagian Atas & Bawah Album -->
+          <div aria-hidden="true" class="pointer-events-none absolute top-2 inset-x-0 h-px bg-gradient-to-r from-transparent via-champagne/30 to-transparent z-20"></div>
+          <div aria-hidden="true" class="pointer-events-none absolute bottom-2 inset-x-0 h-px bg-gradient-to-r from-transparent via-champagne/30 to-transparent z-20"></div>
+
+          <!-- Gradasi Lembut Tepi Kiri & Kanan Menyatu dengan Warna Blush -->
+          <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-0 w-7 sm:w-16 z-20 bg-gradient-to-r from-blush via-blush/70 to-transparent"></div>
+          <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 w-7 sm:w-16 z-20 bg-gradient-to-l from-blush via-blush/70 to-transparent"></div>
+
+          <!-- Wadah Gulir Horizontal Interaktif (Touch Swipe + Mouse Drag + Auto Scroll) -->
+          <div
+            id="album-scroll-container"
+            class="flex items-center overflow-x-auto no-scrollbar touch-pan-x py-6 sm:py-8 px-5 sm:px-10 select-none cursor-grab active:cursor-grabbing"
+          >
+            <!-- ================= SET 1 (9 LEMBAR ALBUM POTRET UTAMA) ================= -->
+            <div id="album-primary-set" class="flex items-center gap-5 sm:gap-7 pr-5 sm:pr-7 shrink-0">
+              <!-- Lembar 01: 001.jpg -->
+              <div class="relative pr-2 pb-2 shrink-0">
+                <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  data-index="0"
+                  data-gallery-title="Sukma & Riksi — Lembar I"
+                  data-gallery-caption="Keanggunan cinta dalam balutan nuansa pastel lembut."
+                  class="album-frame-btn gallery-item group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-blush/50">
+                    <img
+                      src="001.jpg"
+                      data-photo-file="001.jpg"
+                      data-fallback-src="https://placehold.co/600x800/F1E1DF/382F32?text=001.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt="Album Prewedding Sukma & Riksi 001"
+                      draggable="false"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar I</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Lembar 02: 002.jpg -->
+              <div class="relative pr-2 pb-2 mt-4 sm:mt-5 shrink-0">
+                <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  data-index="1"
+                  data-gallery-title="Sukma & Riksi — Lembar II"
+                  data-gallery-caption="Langkah awal menuju ibadah terpanjang bersama."
+                  class="album-frame-btn gallery-item group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-blush/50">
+                    <img
+                      src="002.jpg"
+                      data-photo-file="002.jpg"
+                      data-fallback-src="https://placehold.co/600x800/F1E1DF/382F32?text=002.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt="Album Prewedding Sukma & Riksi 002"
+                      draggable="false"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar II</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Lembar 03: 003.jpg -->
+              <div class="relative pr-2 pb-2 shrink-0">
+                <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  data-index="2"
+                  data-gallery-title="Sukma & Riksi — Lembar III"
+                  data-gallery-caption="Tatapan penuh syukur atas pertemuan yang diridhoi Allah SWT."
+                  class="album-frame-btn gallery-item group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-blush/50">
+                    <img
+                      src="003.jpg"
+                      data-photo-file="003.jpg"
+                      data-fallback-src="https://placehold.co/600x800/FAF1EF/382F32?text=003.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt="Album Prewedding Sukma & Riksi 003"
+                      draggable="false"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar III</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Lembar 04: 004.jpg (Potret 3:4) -->
+              <div class="relative pr-2 pb-2 mt-4 sm:mt-5 shrink-0">
+                <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  data-index="3"
+                  data-gallery-title="Sukma & Riksi — Lembar IV"
+                  data-gallery-caption="Duduk berdampingan menatap masa depan penuh keberkahan."
+                  class="album-frame-btn gallery-item group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-slate-soft/60">
+                    <img
+                      src="004.jpg"
+                      data-photo-file="004.jpg"
+                      data-fallback-src="https://placehold.co/600x800/EEF1F5/382F32?text=004.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt="Album Prewedding Sukma & Riksi 004"
+                      draggable="false"
+                      class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar IV</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Lembar 05: 006.jpg (Potret 3:4) -->
+              <div class="relative pr-2 pb-2 shrink-0">
+                <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  data-index="4"
+                  data-gallery-title="Sukma & Riksi — Lembar V"
+                  data-gallery-caption="Senyum hangat penuh ketenangan saling berpandangan."
+                  class="album-frame-btn gallery-item group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-blush/50">
+                    <img
+                      src="006.jpg"
+                      data-photo-file="006.jpg"
+                      data-fallback-src="https://placehold.co/600x800/F1E1DF/884B57?text=006.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt="Album Prewedding Sukma & Riksi 006"
+                      draggable="false"
+                      class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar V</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Lembar 06: 007.jpg -->
+              <div class="relative pr-2 pb-2 mt-4 sm:mt-5 shrink-0">
+                <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  data-index="5"
+                  data-gallery-title="Sukma & Riksi — Lembar VI"
+                  data-gallery-caption="Sandaran hati dan tempat pulang yang penuh ketenteraman."
+                  class="album-frame-btn gallery-item group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-slate-soft/60">
+                    <img
+                      src="007.jpg"
+                      data-photo-file="007.jpg"
+                      data-fallback-src="https://placehold.co/600x800/EEF1F5/4E5A67?text=007.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt="Album Prewedding Sukma & Riksi 007"
+                      draggable="false"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar VI</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Lembar 07: 008.jpg -->
+              <div class="relative pr-2 pb-2 shrink-0">
+                <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  data-index="6"
+                  data-gallery-title="Sukma & Riksi — Lembar VII"
+                  data-gallery-caption="Berjalan beriringan menjemput lembaran baru kehidupan."
+                  class="album-frame-btn gallery-item group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-champagne-soft/50">
+                    <img
+                      src="008.jpg"
+                      data-photo-file="008.jpg"
+                      data-fallback-src="https://placehold.co/600x800/F7EFE1/9A7434?text=008.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt="Album Prewedding Sukma & Riksi 008"
+                      draggable="false"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar VII</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Lembar 08: 010.jpg (Potret 3:4) -->
+              <div class="relative pr-2 pb-2 mt-4 sm:mt-5 shrink-0">
+                <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  data-index="7"
+                  data-gallery-title="Sukma & Riksi — Lembar VIII"
+                  data-gallery-caption="Kebersamaan yang hangat penuh rasa syukur."
+                  class="album-frame-btn gallery-item group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-slate-soft/60">
+                    <img
+                      src="010.jpg"
+                      data-photo-file="010.jpg"
+                      data-fallback-src="https://placehold.co/600x800/EEF1F5/382F32?text=010.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt="Album Prewedding Sukma & Riksi 010"
+                      draggable="false"
+                      class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar VIII</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Lembar 09: 011.jpg (Potret 3:4) -->
+              <div class="relative pr-2 pb-2 shrink-0">
+                <div aria-hidden="true" class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  data-index="8"
+                  data-gallery-title="Sukma & Riksi — Lembar IX"
+                  data-gallery-caption="Semoga Allah menghimpun kami dalam keluarga yang sakinah, mawaddah, warahmah."
+                  class="album-frame-btn gallery-item group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-champagne-soft/50">
+                    <img
+                      src="011.jpg"
+                      data-photo-file="011.jpg"
+                      data-fallback-src="https://placehold.co/600x800/F7EFE1/382F32?text=011.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt="Album Prewedding Sukma & Riksi 011"
+                      draggable="false"
+                      class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar IX</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- ================= SET 2 (DUPLIKAT MULUS UNTUK GESER & LOOP BERKESINAMBUNGAN) ================= -->
+            <div aria-hidden="true" class="flex items-center gap-5 sm:gap-7 pr-5 sm:pr-7 shrink-0">
+              <!-- Clone Lembar 01: 001.jpg -->
+              <div class="relative pr-2 pb-2 shrink-0">
+                <div class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  tabindex="-1"
+                  data-index="0"
+                  class="album-frame-btn group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-blush/50">
+                    <img
+                      src="001.jpg"
+                      data-photo-file="001.jpg"
+                      data-fallback-src="https://placehold.co/600x800/F1E1DF/382F32?text=001.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt=""
+                      draggable="false"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar I</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Clone Lembar 02: 002.jpg -->
+              <div class="relative pr-2 pb-2 mt-4 sm:mt-5 shrink-0">
+                <div class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  tabindex="-1"
+                  data-index="1"
+                  class="album-frame-btn group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-blush/50">
+                    <img
+                      src="002.jpg"
+                      data-photo-file="002.jpg"
+                      data-fallback-src="https://placehold.co/600x800/F1E1DF/382F32?text=002.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt=""
+                      draggable="false"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar II</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Clone Lembar 03: 003.jpg -->
+              <div class="relative pr-2 pb-2 shrink-0">
+                <div class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  tabindex="-1"
+                  data-index="2"
+                  class="album-frame-btn group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-blush/50">
+                    <img
+                      src="003.jpg"
+                      data-photo-file="003.jpg"
+                      data-fallback-src="https://placehold.co/600x800/FAF1EF/382F32?text=003.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt=""
+                      draggable="false"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar III</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Clone Lembar 04: 004.jpg (Potret 3:4) -->
+              <div class="relative pr-2 pb-2 mt-4 sm:mt-5 shrink-0">
+                <div class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  tabindex="-1"
+                  data-index="3"
+                  class="album-frame-btn group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-slate-soft/60">
+                    <img
+                      src="004.jpg"
+                      data-photo-file="004.jpg"
+                      data-fallback-src="https://placehold.co/600x800/EEF1F5/382F32?text=004.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt=""
+                      draggable="false"
+                      class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar IV</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Clone Lembar 05: 006.jpg (Potret 3:4) -->
+              <div class="relative pr-2 pb-2 shrink-0">
+                <div class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  tabindex="-1"
+                  data-index="4"
+                  class="album-frame-btn group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-blush/50">
+                    <img
+                      src="006.jpg"
+                      data-photo-file="006.jpg"
+                      data-fallback-src="https://placehold.co/600x800/F1E1DF/884B57?text=006.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt=""
+                      draggable="false"
+                      class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar V</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Clone Lembar 06: 007.jpg -->
+              <div class="relative pr-2 pb-2 mt-4 sm:mt-5 shrink-0">
+                <div class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  tabindex="-1"
+                  data-index="5"
+                  class="album-frame-btn group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-slate-soft/60">
+                    <img
+                      src="007.jpg"
+                      data-photo-file="007.jpg"
+                      data-fallback-src="https://placehold.co/600x800/EEF1F5/4E5A67?text=007.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt=""
+                      draggable="false"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar VI</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Clone Lembar 07: 008.jpg -->
+              <div class="relative pr-2 pb-2 shrink-0">
+                <div class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  tabindex="-1"
+                  data-index="6"
+                  class="album-frame-btn group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-champagne-soft/50">
+                    <img
+                      src="008.jpg"
+                      data-photo-file="008.jpg"
+                      data-fallback-src="https://placehold.co/600x800/F7EFE1/9A7434?text=008.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt=""
+                      draggable="false"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar VII</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Clone Lembar 08: 010.jpg (Potret 3:4) -->
+              <div class="relative pr-2 pb-2 mt-4 sm:mt-5 shrink-0">
+                <div class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  tabindex="-1"
+                  data-index="7"
+                  class="album-frame-btn group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-slate-soft/60">
+                    <img
+                      src="010.jpg"
+                      data-photo-file="010.jpg"
+                      data-fallback-src="https://placehold.co/600x800/EEF1F5/382F32?text=010.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt=""
+                      draggable="false"
+                      class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar VIII</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Clone Lembar 09: 011.jpg (Potret 3:4) -->
+              <div class="relative pr-2 pb-2 shrink-0">
+                <div class="pointer-events-none absolute top-2 left-2 right-0 bottom-0 rounded-2xl border-[1.25px] border-champagne/55 bg-champagne-soft/35"></div>
+                <button
+                  type="button"
+                  tabindex="-1"
+                  data-index="8"
+                  class="album-frame-btn group relative z-10 w-44 sm:w-52 p-2 bg-ivory offset-photo-card-sm text-center focus:outline-none cursor-pointer transition-transform duration-500 hover:-translate-y-1"
+                >
+                  <div class="w-full aspect-[3/4] overflow-hidden rounded-xl bg-champagne-soft/50">
+                    <img
+                      src="011.jpg"
+                      data-photo-file="011.jpg"
+                      data-fallback-src="https://placehold.co/600x800/F7EFE1/382F32?text=011.jpg"
+                      onerror="window.handleSmartPhotoError(this)"
+                      alt=""
+                      draggable="false"
+                      class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div class="pt-2 pb-0.5 flex items-center justify-center gap-2">
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                    <span class="font-serif italic text-xs text-taupe tracking-wider">Lembar IX</span>
+                    <span class="h-px w-4 bg-champagne/45"></span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kontrol Geser Kanan-Kiri & Jeda / Jalankan Album -->
+      <div class="scroll-reveal reveal-from-up mt-4 px-4 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+        <button
+          id="album-prev-btn"
+          type="button"
+          aria-label="Geser Album ke Kiri"
+          class="bg-ivory hover:bg-blush-deep text-dusty-dark border border-champagne/35 p-2 rounded-full shadow-2xs transition cursor-pointer"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <button
+          id="album-toggle-btn"
+          type="button"
+          class="inline-flex items-center gap-2 bg-ivory hover:bg-blush-deep text-dusty-dark border border-champagne/35 text-xs font-semibold px-4 py-2 rounded-full shadow-2xs transition cursor-pointer"
+        >
+          <span id="album-toggle-icon" class="flex items-center justify-center text-champagne">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z" />
+            </svg>
+          </span>
+          <span id="album-toggle-label">Jeda Album</span>
+        </button>
+
+        <button
+          id="album-next-btn"
+          type="button"
+          aria-label="Geser Album ke Kanan"
+          class="bg-ivory hover:bg-blush-deep text-dusty-dark border border-champagne/35 p-2 rounded-full shadow-2xs transition cursor-pointer"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+      <p class="mt-1.5 text-center text-[11px] text-taupe/85 font-medium tracking-wide">
+        Geser kanan / kiri atau ketuk foto untuk tampilan penuh
+      </p>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 10. UCAPKAN SESUATU (BUKU TAMU & DOA RESTU)                        -->
+    <!-- =================================================================== -->
+    <section id="ucapan" class="scroll-mt-8 px-4 py-8 sm:py-12 max-w-4xl mx-auto overflow-hidden">
+      <div class="scroll-reveal reveal-zoom-in text-center mb-8">
+        <p class="text-xs uppercase tracking-[0.25em] text-dusty-dark font-semibold mb-1.5">
+          Wishes &amp; Prayers
+        </p>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-cocoa mb-2">
+          Ucapkan Sesuatu
+        </h3>
+        <p class="text-sm text-taupe max-w-md mx-auto">
+          Tuliskan doa restu, harapan baik, atau pesan hangat untuk mengiringi langkah awal kami berdua.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+        <!-- Formulir Ucapan -->
+        <div class="scroll-reveal reveal-from-left reveal-delay-100 lg:col-span-5 bg-ivory border border-dusty/25 rounded-3xl p-6 shadow-sm self-start">
+          <form id="wishes-form" class="space-y-4">
+            <div>
+              <label for="wish-name" class="block text-xs font-semibold text-cocoa mb-1.5">
+                Nama Anda
+              </label>
+              <input
+                id="wish-name"
+                type="text"
+                required
+                placeholder="Masukkan nama Anda"
+                class="w-full bg-blush/60 border border-dusty/25 rounded-xl px-3.5 py-2.5 text-sm text-cocoa placeholder:text-taupe/60 focus:outline-none focus:border-dusty-dark"
+              />
+            </div>
+
+            <div>
+              <label for="wish-message" class="block text-xs font-semibold text-cocoa mb-1.5">
+                Ucapan &amp; Doa Restu
+              </label>
+              <textarea
+                id="wish-message"
+                rows="4"
+                required
+                placeholder="Tuliskan ucapan selamat & doa terbaik untuk Sukma & Riksi..."
+                class="w-full bg-blush/60 border border-dusty/25 rounded-xl px-3.5 py-2.5 text-sm text-cocoa placeholder:text-taupe/60 focus:outline-none focus:border-dusty-dark"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-dusty to-dusty-dark hover:from-dusty-dark hover:to-dusty text-ivory font-medium text-sm py-3 px-5 rounded-xl shadow-md transition-all duration-300 cursor-pointer"
+            >
+              <svg class="w-4 h-4 text-[#A7F3D0]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.473 1.331 4.986L2 22l5.184-1.359a9.927 9.927 0 004.847 1.264h.004c5.515 0 9.968-4.453 9.968-9.969A9.93 9.93 0 0019.08 4.92 9.903 9.903 0 0012.031 2zm5.814 14.129c-.244.688-1.422 1.316-1.969 1.398-.504.075-1.141.107-1.842-.116-.426-.135-.973-.316-1.674-.619-2.947-1.272-4.871-4.242-5.018-4.438-.147-.196-1.199-1.595-1.199-3.043 0-1.448.759-2.16 1.028-2.454.269-.294.588-.368.784-.368.196 0 .392.002.563.01.181.009.423-.069.662.505.245.588.833 2.036.906 2.183.074.147.123.319.025.515-.098.196-.147.319-.294.49-.147.172-.309.383-.441.515-.147.147-.3.306-.129.6.172.294.762 1.257 1.636 2.036 1.124 1.002 2.072 1.313 2.366 1.46.294.147.466.123.637-.074.172-.196.735-.858.931-1.152.196-.294.392-.245.662-.147.269.098 1.716.809 2.01.956.294.147.49.221.563.343.074.123.074.711-.17 1.399z" />
+              </svg>
+              <span>Kirim Ucapan via WhatsApp</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Daftar Doa & Ucapan -->
+        <div class="scroll-reveal reveal-from-right reveal-delay-200 lg:col-span-7 bg-ivory border border-dusty/25 rounded-3xl p-6 shadow-sm flex flex-col">
+          <div class="flex items-center justify-between pb-3.5 mb-4 border-b border-dusty/15">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-dusty"></span>
+              <h4 class="font-serif text-lg sm:text-xl font-bold text-cocoa">
+                Doa &amp; Ucapan Hangat
+              </h4>
+            </div>
+            <span class="text-xs font-semibold text-dusty-dark bg-blush border border-dusty/20 px-3 py-1 rounded-full">
+              <span id="stat-total">0</span> Ucapan
+            </span>
+          </div>
+
+          <div id="wishes-list" class="space-y-3 max-h-96 overflow-y-auto pr-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 11. AMPLOP DIGITAL / TANDA KASIH                                    -->
+    <!-- =================================================================== -->
+    <section id="hadiah" class="scroll-mt-8 px-4 py-8 sm:py-12 max-w-4xl mx-auto overflow-hidden">
+      <div class="scroll-reveal reveal-zoom-in bg-ivory border border-champagne/30 rounded-3xl p-6 sm:p-10 shadow-sm text-center">
+        <p class="scroll-reveal reveal-from-up text-xs uppercase tracking-[0.25em] text-champagne font-semibold mb-1.5">
+          Wedding Gift
+        </p>
+        <h3 class="scroll-reveal reveal-from-up reveal-delay-100 font-serif text-3xl sm:text-4xl font-bold text-cocoa mb-2">
+          Amplop Digital
+        </h3>
+        <p class="scroll-reveal reveal-from-up reveal-delay-150 text-xs sm:text-sm text-taupe max-w-xl mx-auto mb-7 leading-relaxed">
+          Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun apabila memberi merupakan ungkapan tanda kasih, Anda dapat menyalurkannya melalui rekening berikut:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-2xl mx-auto text-left">
+          <div class="scroll-reveal reveal-from-left reveal-delay-200 bg-gradient-to-br from-blush to-blush-deep/75 border border-dusty/25 rounded-2xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-bold text-sm tracking-wide text-dusty-dark">BANK MANDIRI</span>
+                <span class="text-[11px] bg-ivory/85 text-dusty-dark font-medium px-2.5 py-0.5 rounded-full border border-dusty/20">Mempelai Wanita</span>
+              </div>
+              <p class="text-xs text-taupe mb-0.5">Nomor Rekening</p>
+              <p class="font-mono text-lg sm:text-xl font-bold text-cocoa tracking-wider mb-2">
+                1300027268401
+              </p>
+              <p class="text-xs text-taupe">
+                a.n. <span class="font-semibold text-cocoa">Sukmawati</span>
+              </p>
+            </div>
+
+            <button
+              type="button"
+              data-copy="1300027268401"
+              class="copy-btn mt-4 w-full inline-flex items-center justify-center gap-2 bg-ivory hover:bg-dusty-dark hover:text-ivory text-dusty-dark border border-dusty/30 font-medium text-xs py-2.5 px-4 rounded-xl transition-all duration-300 cursor-pointer"
+            >
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <span>Salin Nomor Rekening</span>
+            </button>
+          </div>
+
+          <div class="scroll-reveal reveal-from-right reveal-delay-250 bg-gradient-to-br from-champagne-soft/80 to-ivory border border-champagne/30 rounded-2xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-bold text-sm tracking-wide text-champagne">BANK MANDIRI</span>
+                <span class="text-[11px] bg-ivory/85 text-champagne font-medium px-2.5 py-0.5 rounded-full border border-champagne/25">Mempelai Pria</span>
+              </div>
+              <p class="text-xs text-taupe mb-0.5">Nomor Rekening</p>
+              <p class="font-mono text-lg sm:text-xl font-bold text-cocoa tracking-wider mb-2">
+                1300030345634
+              </p>
+              <p class="text-xs text-taupe">
+                a.n. <span class="font-semibold text-cocoa">Riksi Yusuf Tajiri</span>
+              </p>
+            </div>
+
+            <button
+              type="button"
+              data-copy="1300030345634"
+              class="copy-btn mt-4 w-full inline-flex items-center justify-center gap-2 bg-ivory hover:bg-champagne hover:text-ivory text-champagne border border-champagne/35 font-medium text-xs py-2.5 px-4 rounded-xl transition-all duration-300 cursor-pointer"
+            >
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <span>Salin Nomor Rekening</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 12. PENUTUP (CLOSING)                                               -->
+    <!-- =================================================================== -->
+    <footer id="penutup" class="px-4 pt-8 pb-6 text-center max-w-2xl mx-auto">
+      <div class="scroll-reveal reveal-zoom-in bg-ivory/90 border border-champagne/25 rounded-3xl p-7 sm:p-9">
+        <p class="scroll-reveal reveal-from-up text-xs sm:text-sm text-taupe leading-relaxed mb-4">
+          Atas kehadiran serta doa restu Bapak/Ibu/Saudara/i, kami sekeluarga mengucapkan terima kasih yang sebesar-besarnya. Semoga Allah SWT membalas segala kebaikan Anda dengan limpahan keberkahan.
+        </p>
+        <p class="scroll-reveal reveal-from-up reveal-delay-100 font-serif text-lg sm:text-xl font-semibold text-cocoa mb-5">
+          Wassalamu'alaikum Warahmatullahi Wabarakatuh
+        </p>
+
+        <p class="scroll-reveal reveal-from-up reveal-delay-150 text-xs text-taupe mb-1">Kami yang berbahagia,</p>
+        <h4 class="scroll-reveal reveal-zoom-in reveal-delay-200 font-script text-4xl sm:text-5xl text-dusty-dark mb-3">
+          Sukma &amp; Riksi
+        </h4>
+        <p class="scroll-reveal reveal-from-up reveal-delay-250 text-xs text-taupe">
+          Beserta Kedua Keluarga Besar
+        </p>
+      </div>
+    </footer>
+
+    <!-- Kredit Studio di Bagian Paling Bawah -->
+    <div class="scroll-reveal reveal-from-up mt-4 px-4 text-center">
+      <div class="inline-flex items-center justify-center gap-2.5 text-[11px] text-taupe/85 tracking-wider">
+        <span class="h-px w-6 bg-champagne/45"></span>
+        <span>
+          Digital Invitation by
+          <strong class="font-serif text-xs sm:text-sm font-bold text-cocoa tracking-wide">Ark Production</strong>
+        </span>
+        <span class="h-px w-6 bg-champagne/45"></span>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL LIGHTBOX GALERI (TAMPILAN FOTO UTUH & JERNIH)                   -->
+  <!-- ===================================================================== -->
+  <div id="gallery-lightbox" class="animated-modal fixed inset-0 z-[65] hidden bg-cocoa/85 backdrop-blur-sm items-center justify-center p-4">
+    <div class="animated-modal-card relative bg-ivory rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-champagne/30">
+      <span id="lightbox-counter" class="absolute top-3 left-3 z-20 bg-ivory/90 text-cocoa text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm">
+        1 / 9
+      </span>
+
+      <button
+        id="close-lightbox-btn"
+        type="button"
+        aria-label="Tutup Pratinjau Foto"
+        class="absolute top-3 right-3 z-20 bg-ivory/90 text-cocoa hover:bg-blush p-2 rounded-full shadow-md cursor-pointer"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div class="relative bg-gradient-to-b from-blush/80 via-ivory to-ivory pt-12 pb-2 px-4">
+        <img id="lightbox-img" src="" alt="Pratinjau Galeri" class="w-full max-h-[64vh] object-contain mx-auto rounded-2xl" />
+
+        <button
+          id="prev-lightbox-btn"
+          type="button"
+          aria-label="Foto Sebelumnya"
+          class="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-ivory/90 hover:bg-blush text-cocoa p-2.5 rounded-full shadow-md transition cursor-pointer"
+        >
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <button
+          id="next-lightbox-btn"
+          type="button"
+          aria-label="Foto Berikutnya"
+          class="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-ivory/90 hover:bg-blush text-cocoa p-2.5 rounded-full shadow-md transition cursor-pointer"
+        >
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-5 text-center bg-ivory">
+        <h4 id="lightbox-title" class="font-serif text-xl font-bold text-cocoa mb-1"></h4>
+        <p id="lightbox-caption" class="text-xs text-taupe"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL GENERATOR TAUTAN KHUSUS NAMA TAMU                               -->
+  <!-- ===================================================================== -->
+  <div id="guest-link-modal" class="animated-modal fixed inset-0 z-[65] hidden bg-cocoa/70 backdrop-blur-sm items-center justify-center p-4">
+    <div class="animated-modal-card relative bg-ivory rounded-3xl max-w-md w-full p-6 shadow-2xl border border-champagne/35">
+      <div class="flex items-center justify-between mb-3">
+        <h4 class="font-serif text-2xl font-bold text-cocoa">Buat Tautan Tamu</h4>
+        <button id="close-guest-modal-btn" type="button" class="text-taupe hover:text-cocoa p-1.5 rounded-full cursor-pointer">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <p class="text-xs text-taupe mb-4">
+        Ketik nama tamu undangan untuk membuat tautan khusus dengan sapaan otomatis di halaman sampul.
+      </p>
+      <input
+        id="custom-guest-input"
+        type="text"
+        placeholder="Contoh: Bpk. Ahmad Fauzi & Keluarga"
+        class="w-full bg-blush/70 border border-dusty/25 rounded-xl px-3.5 py-2.5 text-sm text-cocoa mb-3 focus:outline-none focus:border-dusty-dark"
+      />
+      <div class="flex gap-2">
+        <button
+          id="copy-guest-link-btn"
+          type="button"
+          class="flex-1 bg-dusty-dark hover:bg-dusty text-ivory text-xs font-medium py-3 px-4 rounded-xl transition cursor-pointer"
+        >
+          Salin Tautan Undangan
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL PLAYLIST MUSIK LATAR                                            -->
+  <!-- ===================================================================== -->
+  <div id="playlist-modal" class="animated-modal fixed inset-0 z-[65] hidden bg-cocoa/70 backdrop-blur-sm items-center justify-center p-4">
+    <div class="animated-modal-card relative bg-ivory rounded-3xl max-w-md w-full p-6 shadow-2xl border border-champagne/40">
+      <div class="flex items-center justify-between mb-2">
+        <h4 class="font-serif text-2xl font-bold text-cocoa">Musik Latar Pilihan</h4>
+        <button id="close-playlist-modal-btn" type="button" class="text-taupe hover:text-cocoa p-1.5 rounded-full cursor-pointer">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <p class="text-xs text-taupe mb-4">
+        Simpan file lagu Anda dengan nama <span class="font-semibold text-cocoa">music.mp3</span> (atau <span class="font-semibold text-cocoa">001.mp3 – 003.mp3</span>) di dalam folder yang sama dengan file undangan dan foto.
+      </p>
+
+      <div id="playlist-items-container" class="space-y-2 max-h-60 overflow-y-auto pr-1 mb-4"></div>
+
+      <button
+        type="button"
+        class="trigger-audio-loader w-full inline-flex items-center justify-center gap-2 bg-blush hover:bg-blush-deep text-dusty-dark border border-dusty/35 text-xs font-semibold py-3 px-4 rounded-xl transition cursor-pointer"
+      >
+        <svg class="w-4 h-4 text-champagne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+        </svg>
+        <span>Pilih File Musik dari HP / Perangkat</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- SCRIPT INTERAKTIF UNDANGAN PERNIKAHAN                                 -->
+  <!-- ===================================================================== -->
+  <script>
+    (function () {
+      document.body.classList.add('overflow-hidden');
+      var isCoverOpened = false;
+
+      // Sembunyikan tombol pemuat file lokal otomatis saat undangan sudah online (http/https)
+      var isHostedOnline =
+        (window.location.protocol === 'http:' || window.location.protocol === 'https:') &&
+        window.location.hostname !== 'localhost' &&
+        window.location.hostname !== '127.0.0.1';
+
+      if (isHostedOnline) {
+        document.querySelectorAll('.local-preview-only').forEach(function (el) {
+          el.classList.add('hidden');
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // 1. HELPER NOTIFIKASI TOAST & MODAL ANIMASI
+      // -------------------------------------------------------------------
+      function showToast(message) {
+        var container = document.getElementById('toast-container');
+        if (!container) return;
+
+        var toast = document.createElement('div');
+        toast.className =
+          'bg-cocoa/95 text-ivory text-xs font-medium px-4 py-2.5 rounded-full shadow-lg border border-champagne/40 text-center transition-all duration-300 opacity-0 -translate-y-2';
+        toast.textContent = message;
+        container.appendChild(toast);
+
+        requestAnimationFrame(function () {
+          toast.classList.remove('opacity-0', '-translate-y-2');
+          toast.classList.add('opacity-100', 'translate-y-0');
+        });
+
+        setTimeout(function () {
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', '-translate-y-2');
+          setTimeout(function () {
+            if (toast.parentNode) toast.parentNode.removeChild(toast);
+          }, 300);
+        }, 2800);
+      }
+
+      function openAnimatedModal(modal) {
+        if (!modal) return;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        requestAnimationFrame(function () {
+          modal.classList.add('modal-active');
+        });
+      }
+
+      function closeAnimatedModal(modal) {
+        if (!modal) return;
+        modal.classList.remove('modal-active');
+        setTimeout(function () {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }, 320);
+      }
+
+      // -------------------------------------------------------------------
+      // 2. NAMA TAMU DINAMIS DARI URL (?to=...) & GENERATOR TAUTAN TAMU
+      // -------------------------------------------------------------------
+      var urlParams = new URLSearchParams(window.location.search);
+      var rawGuestName = urlParams.get('to') || urlParams.get('tamu') || '';
+      var coverGuestEl = document.getElementById('cover-guest-name');
+      var wishNameInput = document.getElementById('wish-name');
+
+      if (rawGuestName.trim()) {
+        var cleanGuest = rawGuestName.trim();
+        if (coverGuestEl) coverGuestEl.textContent = cleanGuest;
+        if (wishNameInput && !wishNameInput.value) wishNameInput.value = cleanGuest;
+      }
+
+      var shareGuestModalBtn = document.getElementById('share-guest-modal-btn');
+      var guestLinkModal = document.getElementById('guest-link-modal');
+      var closeGuestModalBtn = document.getElementById('close-guest-modal-btn');
+      var customGuestInput = document.getElementById('custom-guest-input');
+      var copyGuestLinkBtn = document.getElementById('copy-guest-link-btn');
+
+      if (shareGuestModalBtn && guestLinkModal) {
+        shareGuestModalBtn.addEventListener('click', function () {
+          openAnimatedModal(guestLinkModal);
+        });
+      }
+
+      if (closeGuestModalBtn && guestLinkModal) {
+        closeGuestModalBtn.addEventListener('click', function () {
+          closeAnimatedModal(guestLinkModal);
+        });
+        guestLinkModal.addEventListener('click', function (e) {
+          if (e.target === guestLinkModal) closeAnimatedModal(guestLinkModal);
+        });
+      }
+
+      if (copyGuestLinkBtn) {
+        copyGuestLinkBtn.addEventListener('click', function () {
+          var nameVal = (customGuestInput ? customGuestInput.value : '').trim();
+          var baseUrl = window.location.origin + window.location.pathname;
+          var finalUrl = nameVal ? baseUrl + '?to=' + encodeURIComponent(nameVal) : baseUrl;
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(finalUrl).then(function () {
+              showToast('Tautan undangan berhasil disalin!');
+              closeAnimatedModal(guestLinkModal);
+            });
+          } else {
+            showToast('Tautan: ' + finalUrl);
+          }
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // 3. PEMUTAR MUSIK LATAR & PLAYLIST
+      // -------------------------------------------------------------------
+      var audioPlayer = document.getElementById('bg-audio-player');
+      var musicToggleBtn = document.getElementById('music-toggle-btn');
+      var musicNextBtn = document.getElementById('music-next-btn');
+      var musicPlaylistBtn = document.getElementById('music-playlist-btn');
+      var musicLabel = document.getElementById('music-label');
+      var musicBars = document.getElementById('music-bars');
+      var playlistModal = document.getElementById('playlist-modal');
+      var closePlaylistModalBtn = document.getElementById('close-playlist-modal-btn');
+      var playlistItemsContainer = document.getElementById('playlist-items-container');
+      var localAudioLoader = document.getElementById('local-audio-loader');
+      var audioLoaderTriggers = document.querySelectorAll('.trigger-audio-loader');
+
+      var tracks = [
+        { title: 'Lagu Utama (music.mp3)', src: 'music.mp3' },
+        { title: 'Melodi Cinta I (001.mp3)', src: '001.mp3' },
+        { title: 'Melodi Cinta II (002.mp3)', src: '002.mp3' },
+        { title: 'Melodi Cinta III (003.mp3)', src: '003.mp3' }
+      ];
+      var currentTrackIndex = 0;
+      var isMusicPlaying = false;
+
+      function updateMusicUI(playing) {
+        isMusicPlaying = playing;
+        if (musicLabel) {
+          musicLabel.textContent = playing ? tracks[currentTrackIndex].title.replace(/\s*\(.*\)/, '') : 'Musik';
+        }
+        if (musicBars) {
+          musicBars.style.opacity = playing ? '1' : '0.4';
+        }
+        if (musicNextBtn) {
+          if (tracks.length > 1) musicNextBtn.classList.remove('hidden');
+        }
+        renderPlaylistItems();
+      }
+
+      function playTrack(index, silentFail) {
+        if (!audioPlayer || tracks.length === 0) return;
+        currentTrackIndex = (index + tracks.length) % tracks.length;
+        audioPlayer.src = tracks[currentTrackIndex].src;
+        audioPlayer.loop = tracks.length === 1;
+
+        var playPromise = audioPlayer.play();
+        if (playPromise && typeof playPromise.then === 'function') {
+          playPromise
+            .then(function () {
+              updateMusicUI(true);
+            })
+            .catch(function () {
+              updateMusicUI(false);
+              if (!silentFail) {
+                showToast('Ketuk tombol Musik atau pilih file audio dari perangkat.');
+              }
+            });
+        }
+      }
+
+      function renderPlaylistItems() {
+        if (!playlistItemsContainer) return;
+        playlistItemsContainer.innerHTML = '';
+        tracks.forEach(function (track, idx) {
+          var isCurrent = idx === currentTrackIndex && isMusicPlaying;
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className =
+            'w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl border text-left text-xs transition cursor-pointer ' +
+            (isCurrent
+              ? 'bg-blush-deep border-dusty/40 text-dusty-dark font-semibold'
+              : 'bg-blush/50 hover:bg-blush border-dusty/15 text-cocoa');
+
+          var titleSpan = document.createElement('span');
+          titleSpan.className = 'truncate pr-2';
+          titleSpan.textContent = (idx + 1) + '. ' + track.title;
+
+          var badgeSpan = document.createElement('span');
+          badgeSpan.className = 'text-[10px] shrink-0 ' + (isCurrent ? 'text-dusty-dark font-bold' : 'text-taupe');
+          badgeSpan.textContent = isCurrent ? 'Diputar' : 'Putar';
+
+          btn.appendChild(titleSpan);
+          btn.appendChild(badgeSpan);
+          btn.addEventListener('click', function () {
+            playTrack(idx, false);
+          });
+          playlistItemsContainer.appendChild(btn);
+        });
+      }
+
+      if (audioPlayer) {
+        audioPlayer.addEventListener('ended', function () {
+          playTrack(currentTrackIndex + 1, true);
+        });
+      }
+
+      if (musicToggleBtn && audioPlayer) {
+        musicToggleBtn.addEventListener('click', function () {
+          if (isMusicPlaying) {
+            audioPlayer.pause();
+            updateMusicUI(false);
+          } else if (audioPlayer.src) {
+            audioPlayer.play().then(function () {
+              updateMusicUI(true);
+            }).catch(function () {
+              playTrack(currentTrackIndex, false);
+            });
+          } else {
+            playTrack(0, false);
+          }
+        });
+      }
+
+      if (musicNextBtn) {
+        musicNextBtn.addEventListener('click', function () {
+          playTrack(currentTrackIndex + 1, false);
+        });
+      }
+
+      if (musicPlaylistBtn && playlistModal) {
+        musicPlaylistBtn.addEventListener('click', function () {
+          renderPlaylistItems();
+          openAnimatedModal(playlistModal);
+        });
+      }
+
+      if (closePlaylistModalBtn && playlistModal) {
+        closePlaylistModalBtn.addEventListener('click', function () {
+          closeAnimatedModal(playlistModal);
+        });
+        playlistModal.addEventListener('click', function (e) {
+          if (e.target === playlistModal) closeAnimatedModal(playlistModal);
+        });
+      }
+
+      if (localAudioLoader && audioLoaderTriggers.length > 0) {
+        audioLoaderTriggers.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            localAudioLoader.click();
+          });
+        });
+
+        localAudioLoader.addEventListener('change', function (e) {
+          var files = Array.from(e.target.files || []);
+          if (files.length === 0) return;
+
+          tracks = files.map(function (f) {
+            return {
+              title: f.name.replace(/\.[^.]+$/, ''),
+              src: URL.createObjectURL(f)
+            };
+          });
+          playTrack(0, false);
+          showToast(files.length + ' lagu berhasil ditambahkan!');
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // 4. BUKA SAMPUL UNDANGAN (KLIK / GESER KE ATAS / SCROLL)
+      // -------------------------------------------------------------------
+      var openingCover = document.getElementById('opening-cover');
+      var scrollSwipeCue = document.getElementById('scroll-swipe-cue');
+      var floatingTopControls = document.getElementById('floating-top-controls');
+
+      function openCover() {
+        if (isCoverOpened) return;
+        isCoverOpened = true;
+
+        document.body.classList.remove('overflow-hidden');
+
+        if (openingCover) {
+          openingCover.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+          setTimeout(function () {
+            openingCover.classList.add('hidden');
+          }, 750);
+        }
+
+        if (floatingTopControls) {
+          floatingTopControls.classList.remove('opacity-0', '-translate-y-6', 'pointer-events-none');
+          floatingTopControls.classList.add('opacity-100', 'translate-y-0');
+        }
+
+        triggerInitialHeroAnimations();
+        playTrack(0, true);
+      }
+
+      if (scrollSwipeCue) {
+        scrollSwipeCue.addEventListener('click', openCover);
+      }
+
+      if (openingCover) {
+        var coverTouchStartY = 0;
+        openingCover.addEventListener(
+          'touchstart',
+          function (e) {
+            if (e.touches && e.touches.length > 0) {
+              coverTouchStartY = e.touches[0].clientY;
+            }
+          },
+          { passive: true }
+        );
+
+        openingCover.addEventListener(
+          'touchend',
+          function (e) {
+            if (e.changedTouches && e.changedTouches.length > 0) {
+              var deltaY = coverTouchStartY - e.changedTouches[0].clientY;
+              if (deltaY > 30) {
+                openCover();
+              }
+            }
+          },
+          { passive: true }
+        );
+
+        openingCover.addEventListener(
+          'wheel',
+          function (e) {
+            if (e.deltaY > 15) {
+              openCover();
+            }
+          },
+          { passive: true }
+        );
+      }
+
+      // -------------------------------------------------------------------
+      // 5. HITUNG MUNDUR (COUNTDOWN) & SALIN TEKS
+      // -------------------------------------------------------------------
+      var targetEventDate = new Date('2026-12-20T10:00:00+07:00').getTime();
+      var cdDaysEl = document.getElementById('cd-days');
+      var cdHoursEl = document.getElementById('cd-hours');
+      var cdMinutesEl = document.getElementById('cd-minutes');
+      var cdSecondsEl = document.getElementById('cd-seconds');
+
+      function updateCountdown() {
+        var now = Date.now();
+        var diff = Math.max(0, targetEventDate - now);
+
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        var minutes = Math.floor((diff / (1000 * 60)) % 60);
+        var seconds = Math.floor((diff / 1000) % 60);
+
+        if (cdDaysEl) cdDaysEl.textContent = String(days).padStart(2, '0');
+        if (cdHoursEl) cdHoursEl.textContent = String(hours).padStart(2, '0');
+        if (cdMinutesEl) cdMinutesEl.textContent = String(minutes).padStart(2, '0');
+        if (cdSecondsEl) cdSecondsEl.textContent = String(seconds).padStart(2, '0');
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      document.querySelectorAll('.copy-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var textToCopy = btn.getAttribute('data-copy') || '';
+          if (!textToCopy) return;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(textToCopy).then(function () {
+              showToast('Berhasil disalin: ' + textToCopy);
+            });
+          } else {
+            var tempInput = document.createElement('textarea');
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showToast('Berhasil disalin: ' + textToCopy);
+          }
+        });
+      });
+
+      // -------------------------------------------------------------------
+      // 5B. KONTROL INTERAKTIF PETA LOKASI (MODE PETA/SATELIT & FOKUS TITIK)
+      // -------------------------------------------------------------------
+      var venueMapIframe = document.getElementById('venue-map-iframe');
+      var mapTypeButtons = document.querySelectorAll('.map-type-btn');
+      var mapZoomToggleBtn = document.getElementById('map-zoom-toggle-btn');
+      var mapZoomLabel = document.getElementById('map-zoom-label');
+      var currentMapType = 'm';
+      var currentMapZoom = 17;
+
+      function updateVenueMapSrc() {
+        if (!venueMapIframe) return;
+        var exactCoords = '-7.037170,107.743639';
+        venueMapIframe.src =
+          'https://maps.google.com/maps?q=' +
+          exactCoords +
+          '&t=' +
+          currentMapType +
+          '&z=' +
+          currentMapZoom +
+          '&ie=UTF8&iwloc=&output=embed';
+      }
+
+      mapTypeButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var selectedType = btn.getAttribute('data-map-type') || 'm';
+          if (selectedType === currentMapType) return;
+          currentMapType = selectedType;
+
+          mapTypeButtons.forEach(function (item) {
+            var isSelected = item.getAttribute('data-map-type') === currentMapType;
+            if (isSelected) {
+              item.classList.add('bg-dusty-dark', 'text-ivory', 'font-semibold', 'shadow-2xs');
+              item.classList.remove('text-taupe', 'hover:text-cocoa', 'font-medium');
+            } else {
+              item.classList.remove('bg-dusty-dark', 'text-ivory', 'font-semibold', 'shadow-2xs');
+              item.classList.add('text-taupe', 'hover:text-cocoa', 'font-medium');
+            }
+          });
+
+          updateVenueMapSrc();
+        });
+      });
+
+      if (mapZoomToggleBtn) {
+        mapZoomToggleBtn.addEventListener('click', function () {
+          var isFocusedPin = currentMapZoom >= 17;
+          currentMapZoom = isFocusedPin ? 15 : 17;
+          if (mapZoomLabel) {
+            mapZoomLabel.textContent = isFocusedPin ? 'Fokus ke Titik' : 'Area Sekitar';
+          }
+          updateVenueMapSrc();
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // 6. ALBUM FOTO POTRET BERJALAN + GESER KANAN-KIRI INTERAKTIF & LIGHTBOX
+      // -------------------------------------------------------------------
+      var albumScrollContainer = document.getElementById('album-scroll-container');
+      var albumPrimarySet = document.getElementById('album-primary-set');
+      var albumPrevBtn = document.getElementById('album-prev-btn');
+      var albumNextBtn = document.getElementById('album-next-btn');
+      var albumToggleBtn = document.getElementById('album-toggle-btn');
+      var albumToggleLabel = document.getElementById('album-toggle-label');
+      var albumToggleIcon = document.getElementById('album-toggle-icon');
+
+      var isAlbumManuallyPaused = false;
+      var isAlbumHovered = false;
+      var isAlbumUserInteracting = false;
+      var isAlbumDragging = false;
+      var hasAlbumDragged = false;
+      var albumInteractionResumeTimer = null;
+      var autoScrollFloatPos = 0;
+      var lastAutoFrameTime = null;
+
+      function getAlbumLoopWidth() {
+        if (albumPrimarySet && albumPrimarySet.offsetWidth > 0) {
+          return albumPrimarySet.offsetWidth;
+        }
+        return albumScrollContainer ? albumScrollContainer.scrollWidth / 2 : 0;
+      }
+
+      function pauseAutoScrollTemporarily(delayMs) {
+        isAlbumUserInteracting = true;
+        if (albumInteractionResumeTimer) clearTimeout(albumInteractionResumeTimer);
+        albumInteractionResumeTimer = setTimeout(function () {
+          if (albumScrollContainer) {
+            autoScrollFloatPos = albumScrollContainer.scrollLeft;
+          }
+          lastAutoFrameTime = null;
+          isAlbumUserInteracting = false;
+        }, delayMs || 1400);
+      }
+
+      function updateAlbumPauseUI() {
+        if (isAlbumManuallyPaused) {
+          if (albumToggleLabel) albumToggleLabel.textContent = 'Jalankan Album';
+          if (albumToggleIcon) {
+            albumToggleIcon.innerHTML =
+              '<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>';
+          }
+        } else {
+          if (albumScrollContainer) {
+            autoScrollFloatPos = albumScrollContainer.scrollLeft;
+          }
+          lastAutoFrameTime = null;
+          if (albumToggleLabel) albumToggleLabel.textContent = 'Jeda Album';
+          if (albumToggleIcon) {
+            albumToggleIcon.innerHTML =
+              '<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z" /></svg>';
+          }
+        }
+      }
+
+      if (albumToggleBtn) {
+        albumToggleBtn.addEventListener('click', function () {
+          isAlbumManuallyPaused = !isAlbumManuallyPaused;
+          updateAlbumPauseUI();
+        });
+      }
+
+      if (albumScrollContainer) {
+        // Loop mulus saat digeser melewati batas Set 1
+        albumScrollContainer.addEventListener(
+          'scroll',
+          function () {
+            var loopWidth = getAlbumLoopWidth();
+            if (loopWidth > 0 && albumScrollContainer.scrollLeft >= loopWidth) {
+              albumScrollContainer.scrollLeft -= loopWidth;
+              autoScrollFloatPos = albumScrollContainer.scrollLeft;
+            }
+          },
+          { passive: true }
+        );
+
+        // Interaksi sentuhan layar (Touch Swipe Kanan / Kiri)
+        albumScrollContainer.addEventListener(
+          'touchstart',
+          function () {
+            isAlbumUserInteracting = true;
+            if (albumInteractionResumeTimer) clearTimeout(albumInteractionResumeTimer);
+          },
+          { passive: true }
+        );
+
+        albumScrollContainer.addEventListener(
+          'touchend',
+          function () {
+            pauseAutoScrollTemporarily(1500);
+          },
+          { passive: true }
+        );
+
+        // Interaksi hover kursor di desktop
+        albumScrollContainer.addEventListener('mouseenter', function () {
+          isAlbumHovered = true;
+        });
+
+        albumScrollContainer.addEventListener('mouseleave', function () {
+          isAlbumHovered = false;
+          if (!isAlbumDragging && albumScrollContainer) {
+            autoScrollFloatPos = albumScrollContainer.scrollLeft;
+            lastAutoFrameTime = null;
+          }
+        });
+
+        // Interaksi geser dengan mouse (Drag Kanan / Kiri)
+        var albumDragStartX = 0;
+        var albumDragStartScroll = 0;
+
+        albumScrollContainer.addEventListener('mousedown', function (e) {
+          isAlbumDragging = true;
+          hasAlbumDragged = false;
+          isAlbumUserInteracting = true;
+          if (albumInteractionResumeTimer) clearTimeout(albumInteractionResumeTimer);
+          albumDragStartX = e.pageX - albumScrollContainer.offsetLeft;
+          albumDragStartScroll = albumScrollContainer.scrollLeft;
+        });
+
+        window.addEventListener('mousemove', function (e) {
+          if (!isAlbumDragging) return;
+          var x = e.pageX - albumScrollContainer.offsetLeft;
+          var walk = (x - albumDragStartX) * 1.45;
+          if (Math.abs(walk) > 6) {
+            hasAlbumDragged = true;
+          }
+          var loopWidth = getAlbumLoopWidth();
+          var nextScroll = albumDragStartScroll - walk;
+          if (loopWidth > 0 && nextScroll < 0) {
+            albumDragStartScroll += loopWidth;
+            nextScroll += loopWidth;
+          }
+          albumScrollContainer.scrollLeft = nextScroll;
+        });
+
+        window.addEventListener('mouseup', function () {
+          if (!isAlbumDragging) return;
+          isAlbumDragging = false;
+          pauseAutoScrollTemporarily(1400);
+          setTimeout(function () {
+            hasAlbumDragged = false;
+          }, 70);
+        });
+
+        // Animasi berjalan otomatis halus menggunakan requestAnimationFrame
+        function stepAlbumAutoScroll(timestamp) {
+          var lightboxEl = document.getElementById('gallery-lightbox');
+          var isLightboxOpen = lightboxEl && !lightboxEl.classList.contains('hidden');
+
+          if (
+            isCoverOpened &&
+            !isAlbumManuallyPaused &&
+            !isAlbumHovered &&
+            !isAlbumUserInteracting &&
+            !isAlbumDragging &&
+            !isLightboxOpen
+          ) {
+            if (lastAutoFrameTime !== null) {
+              var dt = Math.min(0.05, (timestamp - lastAutoFrameTime) / 1000);
+              var loopWidth = getAlbumLoopWidth();
+              if (loopWidth > 0) {
+                autoScrollFloatPos += 36 * dt;
+                if (autoScrollFloatPos >= loopWidth) {
+                  autoScrollFloatPos -= loopWidth;
+                }
+                albumScrollContainer.scrollLeft = autoScrollFloatPos;
+              }
+            }
+            lastAutoFrameTime = timestamp;
+          } else {
+            lastAutoFrameTime = null;
+          }
+
+          requestAnimationFrame(stepAlbumAutoScroll);
+        }
+
+        requestAnimationFrame(stepAlbumAutoScroll);
+      }
+
+      if (albumPrevBtn && albumScrollContainer) {
+        albumPrevBtn.addEventListener('click', function () {
+          pauseAutoScrollTemporarily(1800);
+          var loopWidth = getAlbumLoopWidth();
+          if (loopWidth > 0 && albumScrollContainer.scrollLeft < 240) {
+            albumScrollContainer.scrollLeft += loopWidth;
+          }
+          albumScrollContainer.scrollBy({ left: -240, behavior: 'smooth' });
+        });
+      }
+
+      if (albumNextBtn && albumScrollContainer) {
+        albumNextBtn.addEventListener('click', function () {
+          pauseAutoScrollTemporarily(1800);
+          albumScrollContainer.scrollBy({ left: 240, behavior: 'smooth' });
+        });
+      }
+
+      var lightbox = document.getElementById('gallery-lightbox');
+      var lightboxImg = document.getElementById('lightbox-img');
+      var lightboxTitle = document.getElementById('lightbox-title');
+      var lightboxCaption = document.getElementById('lightbox-caption');
+      var lightboxCounter = document.getElementById('lightbox-counter');
+      var closeLightboxBtn = document.getElementById('close-lightbox-btn');
+      var prevLightboxBtn = document.getElementById('prev-lightbox-btn');
+      var nextLightboxBtn = document.getElementById('next-lightbox-btn');
+      var galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+      var allAlbumFrameButtons = Array.from(document.querySelectorAll('.album-frame-btn'));
+      var currentGalleryIndex = 0;
+
+      function openLightboxAt(index) {
+        if (!lightbox || galleryItems.length === 0) return;
+        currentGalleryIndex = (index + galleryItems.length) % galleryItems.length;
+        var activeItem = galleryItems[currentGalleryIndex];
+        var imgEl = activeItem.querySelector('img');
+
+        lightboxImg.src = imgEl ? imgEl.src : '';
+        lightboxTitle.textContent = activeItem.getAttribute('data-gallery-title') || '';
+        lightboxCaption.textContent = activeItem.getAttribute('data-gallery-caption') || '';
+        if (lightboxCounter) {
+          lightboxCounter.textContent = (currentGalleryIndex + 1) + ' / ' + galleryItems.length;
+        }
+        openAnimatedModal(lightbox);
+      }
+
+      allAlbumFrameButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (hasAlbumDragged) return;
+          var targetIdx = parseInt(btn.getAttribute('data-index') || '0', 10);
+          openLightboxAt(targetIdx);
+        });
+      });
+
+      if (prevLightboxBtn) {
+        prevLightboxBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          openLightboxAt(currentGalleryIndex - 1);
+        });
+      }
+
+      if (nextLightboxBtn) {
+        nextLightboxBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          openLightboxAt(currentGalleryIndex + 1);
+        });
+      }
+
+      if (closeLightboxBtn && lightbox) {
+        closeLightboxBtn.addEventListener('click', function () {
+          closeAnimatedModal(lightbox);
+        });
+        lightbox.addEventListener('click', function (e) {
+          if (e.target === lightbox) {
+            closeAnimatedModal(lightbox);
+          }
+        });
+
+        var lbTouchStartX = 0;
+        lightbox.addEventListener(
+          'touchstart',
+          function (e) {
+            if (e.touches && e.touches.length > 0) {
+              lbTouchStartX = e.touches[0].clientX;
+            }
+          },
+          { passive: true }
+        );
+        lightbox.addEventListener('touchend', function (e) {
+          if (e.changedTouches && e.changedTouches.length > 0) {
+            var diffX = lbTouchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diffX) > 45) {
+              openLightboxAt(currentGalleryIndex + (diffX > 0 ? 1 : -1));
+            }
+          }
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (!lightbox || lightbox.classList.contains('hidden')) return;
+        if (e.key === 'ArrowLeft') openLightboxAt(currentGalleryIndex - 1);
+        if (e.key === 'ArrowRight') openLightboxAt(currentGalleryIndex + 1);
+        if (e.key === 'Escape') closeAnimatedModal(lightbox);
+      });
+
+      // Pemetaan file foto lokal (001.jpg - 011.jpg) untuk pratinjau langsung di perangkat
+      var localPhotoLoader = document.getElementById('local-photo-loader');
+      var photoLoaderTriggers = document.querySelectorAll('.trigger-photo-loader');
+
+      if (localPhotoLoader && photoLoaderTriggers.length > 0) {
+        photoLoaderTriggers.forEach(function (btn) {
+          btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            localPhotoLoader.click();
+          });
+        });
+
+        localPhotoLoader.addEventListener('change', function (e) {
+          var files = Array.from(e.target.files || []);
+          if (files.length === 0) return;
+
+          files.sort(function (a, b) {
+            return a.name.localeCompare(b.name, undefined, { numeric: true });
+          });
+
+          var fileMap = new Map();
+          var objectUrls = files.map(function (file) {
+            var url = URL.createObjectURL(file);
+            var lowerName = file.name.toLowerCase();
+            var stem = lowerName.replace(/(\.[^.]+)+$/, '');
+            fileMap.set(lowerName, url);
+            fileMap.set(stem, url);
+            return url;
+          });
+
+          var allTargetedImgs = Array.from(document.querySelectorAll('img[data-photo-file]'));
+          allTargetedImgs.forEach(function (img, idx) {
+            var expectedName = (img.getAttribute('data-photo-file') || '').toLowerCase();
+            var expectedStem = expectedName.replace(/(\.[^.]+)+$/, '');
+            img.onerror = null;
+
+            if (fileMap.has(expectedName)) {
+              img.src = fileMap.get(expectedName);
+            } else if (fileMap.has(expectedStem)) {
+              img.src = fileMap.get(expectedStem);
+            } else {
+              img.src = objectUrls[idx % objectUrls.length];
+            }
+            img.style.opacity = '1';
+          });
+
+          showToast(files.length + ' foto berhasil dimuat ke seluruh undangan!');
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // 6B. KARTU KISAH CINTA GESER KE SAMPING (HORIZONTAL SWIPE STORY)
+      // -------------------------------------------------------------------
+      var storyCarousel = document.getElementById('story-carousel');
+      var storyCards = Array.from(document.querySelectorAll('.story-card'));
+      var storyDots = Array.from(document.querySelectorAll('.story-dot-btn'));
+      var storyPrevBtn = document.getElementById('story-prev-btn');
+      var storyNextBtn = document.getElementById('story-next-btn');
+      var currentStoryIndex = 0;
+
+      function updateStoryIndicators(activeIdx) {
+        currentStoryIndex = activeIdx;
+        storyDots.forEach(function (dot, idx) {
+          if (idx === activeIdx) {
+            dot.classList.remove('w-2', 'bg-dusty/30');
+            dot.classList.add('w-7', 'bg-dusty-dark');
+          } else {
+            dot.classList.remove('w-7', 'bg-dusty-dark');
+            dot.classList.add('w-2', 'bg-dusty/30');
+          }
+        });
+      }
+
+      function scrollToStoryCard(index) {
+        if (!storyCarousel || storyCards.length === 0) return;
+        var targetIdx = (index + storyCards.length) % storyCards.length;
+        var targetCard = storyCards[targetIdx];
+        var targetScrollLeft =
+          targetCard.offsetLeft - (storyCarousel.clientWidth - targetCard.offsetWidth) / 2;
+        storyCarousel.scrollTo({
+          left: Math.max(0, targetScrollLeft),
+          behavior: 'smooth'
+        });
+        updateStoryIndicators(targetIdx);
+      }
+
+      if (storyCarousel && storyCards.length > 0) {
+        var isStoryDragging = false;
+        var storyDragStartX = 0;
+        var storyDragStartScroll = 0;
+
+        storyCarousel.addEventListener(
+          'scroll',
+          function () {
+            var centerPos = storyCarousel.scrollLeft + storyCarousel.clientWidth / 2;
+            var closestIdx = 0;
+            var closestDist = Infinity;
+
+            storyCards.forEach(function (card, idx) {
+              var cardCenter = card.offsetLeft + card.offsetWidth / 2;
+              var dist = Math.abs(centerPos - cardCenter);
+              if (dist < closestDist) {
+                closestDist = dist;
+                closestIdx = idx;
+              }
+            });
+
+            updateStoryIndicators(closestIdx);
+          },
+          { passive: true }
+        );
+
+        storyCarousel.addEventListener('mousedown', function (e) {
+          isStoryDragging = true;
+          storyDragStartX = e.pageX - storyCarousel.offsetLeft;
+          storyDragStartScroll = storyCarousel.scrollLeft;
+        });
+
+        window.addEventListener('mousemove', function (e) {
+          if (!isStoryDragging) return;
+          var x = e.pageX - storyCarousel.offsetLeft;
+          var walk = (x - storyDragStartX) * 1.35;
+          storyCarousel.scrollLeft = storyDragStartScroll - walk;
+        });
+
+        window.addEventListener('mouseup', function () {
+          isStoryDragging = false;
+        });
+      }
+
+      storyDots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          var idx = parseInt(dot.getAttribute('data-story-target') || '0', 10);
+          scrollToStoryCard(idx);
+        });
+      });
+
+      if (storyPrevBtn) {
+        storyPrevBtn.addEventListener('click', function () {
+          scrollToStoryCard(currentStoryIndex - 1);
+        });
+      }
+
+      if (storyNextBtn) {
+        storyNextBtn.addEventListener('click', function () {
+          scrollToStoryCard(currentStoryIndex + 1);
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // 7. UCAPKAN SESUATU (BUKU UCAPAN & DOA RESTU VIA WHATSAPP)
+      // -------------------------------------------------------------------
+      var WISH_WHATSAPP_NUMBER = '6282119608533';
+      var WISHES_STORAGE_KEY = 'undangan_sukma_riksi_ucapan_v1';
+
+      function loadWishesFromStorage() {
+        try {
+          var raw = localStorage.getItem(WISHES_STORAGE_KEY);
+          if (raw) {
+            var parsed = JSON.parse(raw);
+            if (Array.isArray(parsed)) {
+              return parsed;
+            }
+          }
+        } catch (err) {
+          // Abaikan jika penyimpanan browser dibatasi
+        }
+        return [];
+      }
+
+      function saveWishesToStorage(list) {
+        try {
+          var cleanList = list.map(function (item) {
+            return {
+              name: item.name,
+              message: item.message,
+              time: item.time
+            };
+          });
+          localStorage.setItem(WISHES_STORAGE_KEY, JSON.stringify(cleanList));
+        } catch (err) {
+          // Abaikan jika mode privat membatasi penyimpanan
+        }
+      }
+
+      var wishesData = loadWishesFromStorage();
+
+      function renderWishes() {
+        var listEl = document.getElementById('wishes-list');
+        var statTotal = document.getElementById('stat-total');
+
+        if (!listEl) return;
+        if (statTotal) statTotal.textContent = wishesData.length;
+
+        listEl.innerHTML = '';
+
+        if (wishesData.length === 0) {
+          var emptyState = document.createElement('div');
+          emptyState.className = 'bg-blush/50 border border-dashed border-dusty/30 rounded-2xl p-6 text-center my-auto';
+
+          var emptyTitle = document.createElement('p');
+          emptyTitle.className = 'font-serif text-lg font-semibold text-cocoa mb-1';
+          emptyTitle.textContent = 'Belum Ada Ucapan';
+
+          var emptyDesc = document.createElement('p');
+          emptyDesc.className = 'text-xs text-taupe leading-relaxed';
+          emptyDesc.textContent = 'Jadilah yang pertama menuliskan doa dan ucapan hangat untuk Sukma & Riksi.';
+
+          emptyState.appendChild(emptyTitle);
+          emptyState.appendChild(emptyDesc);
+          listEl.appendChild(emptyState);
+          return;
+        }
+
+        wishesData.forEach(function (item, index) {
+          var card = document.createElement('div');
+          card.className = 'bg-blush/55 border border-dusty/20 rounded-2xl p-4' + (index === 0 && item.isNew ? ' animate-wish-in' : '');
+
+          var header = document.createElement('div');
+          header.className = 'flex items-center justify-between gap-2 mb-1.5';
+
+          var nameEl = document.createElement('h5');
+          nameEl.className = 'font-semibold text-sm text-cocoa';
+          nameEl.textContent = item.name;
+
+          var timeEl = document.createElement('span');
+          timeEl.className = 'text-[10px] text-taupe/75 bg-ivory/80 border border-dusty/15 px-2.5 py-0.5 rounded-full';
+          timeEl.textContent = item.time;
+
+          header.appendChild(nameEl);
+          header.appendChild(timeEl);
+
+          var msgEl = document.createElement('p');
+          msgEl.className = 'text-xs sm:text-sm text-taupe leading-relaxed';
+          msgEl.textContent = item.message;
+
+          card.appendChild(header);
+          card.appendChild(msgEl);
+          listEl.appendChild(card);
+        });
+      }
+
+      renderWishes();
+
+      var wishesForm = document.getElementById('wishes-form');
+
+      function appendNewWish(name, message) {
+        wishesData.unshift({
+          name: name,
+          message: message,
+          time: 'Baru saja',
+          isNew: true
+        });
+        saveWishesToStorage(wishesData);
+        renderWishes();
+      }
+
+      if (wishesForm) {
+        wishesForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var name = document.getElementById('wish-name').value.trim();
+          var message = document.getElementById('wish-message').value.trim();
+
+          if (!name || !message) {
+            showToast('Silakan lengkapi Nama dan Ucapan Doa terlebih dahulu.');
+            return;
+          }
+
+          appendNewWish(name, message);
+          document.getElementById('wish-message').value = '';
+          showToast('Mengarahkan ke WhatsApp untuk mengirim ucapan...');
+
+          var waLines = [
+            'Assalamu\'alaikum, ucapan & doa untuk pernikahan *Sukma & Riksi*:',
+            '',
+            '• *Dari:* ' + name,
+            '• *Ucapan & Doa:* ' + message
+          ];
+
+          var waText = encodeURIComponent(waLines.join('\n'));
+          var cleanPhone = (WISH_WHATSAPP_NUMBER || '').replace(/[^0-9]/g, '');
+          var waUrl = 'https://wa.me/' + cleanPhone + '?text=' + waText;
+
+          window.open(waUrl, '_blank', 'noopener,noreferrer');
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // 8. ANIMASI MASUK & KELUAR SETIAP HALAMAN DAN KOMPONEN
+      // -------------------------------------------------------------------
+      var revealElements = document.querySelectorAll('.scroll-reveal');
+
+      function triggerInitialHeroAnimations() {
+        var heroSection = document.getElementById('hero-section');
+        if (!heroSection) return;
+        heroSection.querySelectorAll('.scroll-reveal').forEach(function (el) {
+          el.classList.remove('is-exited-top', 'is-exited-bottom');
+          el.classList.add('is-visible');
+        });
+      }
+
+      if ('IntersectionObserver' in window && revealElements.length > 0) {
+        var revealObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (!isCoverOpened) return;
+
+              if (entry.isIntersecting) {
+                entry.target.classList.remove('is-exited-top', 'is-exited-bottom');
+                entry.target.classList.add('is-visible');
+              } else {
+                entry.target.classList.remove('is-visible');
+                if (entry.boundingClientRect.top < 0) {
+                  entry.target.classList.add('is-exited-top');
+                  entry.target.classList.remove('is-exited-bottom');
+                } else {
+                  entry.target.classList.add('is-exited-bottom');
+                  entry.target.classList.remove('is-exited-top');
+                }
+              }
+            });
+          },
+          {
+            threshold: 0.08,
+            rootMargin: '-15px 0px -15px 0px'
+          }
+        );
+
+        revealElements.forEach(function (el) {
+          revealObserver.observe(el);
+        });
+      } else {
+        revealElements.forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
